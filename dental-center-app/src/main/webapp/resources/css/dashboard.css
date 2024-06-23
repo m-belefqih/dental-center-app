@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --black: #000000;
+    --dark: #363949;
+    --dark-blue: #364670;
+    --light: #F0F5FD;
+    --white: #FFF;
+    --grey: #999;
+    --blue: #1D92F1;
+    --light-blue: #DDEFFD;
+    --red: #D32F2F;
+    --light-red: #FECDD3;
+    --green: #3BC963;
+    --light-green: #E2F7E8;
+    --yellow: #FFD12C;
+    --light-yellow: #FFF8DF;
+    --blue-btn: #1976D2;
+    --dark-blue-btn: #0D47A1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background-color: var(--light);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ==========================================================
+                        left-section
+=========================================================== */
+
+.left-section{
+    background: var(--white);
+    width: 217px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;   
+    padding: 25px 10px;
+    transition: all 0.3s ease;
+}
+
+.left-section .sidebar{ 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.left-section .sidebar .logo-img{
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+} 
+
+.left-section .sidebar .item a,
+.left-section .sign-out a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--dark-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.left-section .sidebar .item.active a h3,
+.left-section .sidebar .item.active a i,
+.left-section .sidebar .item a:hover,
+.left-section .sign-out a:hover{
+    color: var(--blue);
+    transform: scale(1.07);
+}
+
+
+.left-section .sidebar .item a h3,
+.left-section .sign-out a h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.left-section .sidebar .item i,
+.left-section .sign-out i{
+    font-size: 22px;
+}
+
+
+/* ==========================================================
+                    right-section / navbar
+=========================================================== */
+
+.right-section{
+    flex: 1;  /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 25px;
+    background: var(--white);
+}
+
+.right-section .navbar .title-welcome{
+    color: var(--dark-blue);
+}
+
+.right-section .navbar .title-welcome h2 span{
+    font-weight: normal;
+}
+
+.right-section .navbar .iconsBtns-and-profile{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-section .navbar .iconsBtns-and-profile .icons-btns{
+    display: flex;
+    gap: 8px;
+}
+
+.right-section .navbar .iconsBtns-and-profile .icons-btns i{
+    font-size: 20px;
+    background: var(--blue-btn);
+    padding: 8px;
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .navbar .iconsBtns-and-profile .icons-btns i:hover{
+    background: var(--dark-blue-btn);
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info .account a h5{
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: var(--black) !important;
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile .info .account p{
+    font-size: 13px;
+    color: var(--grey);
+}
+
+.right-section .navbar .iconsBtns-and-profile .profile > i{
+    font-size: 24px;
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+                    right-section / main
+=========================================================== */
+
+.right-section .main{
+    flex: 1;  /* flex-grow: 1; */
+    display: flex; 
+    flex-direction: column;
+    padding: 30px;
+}
+
+.right-section .main .header{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.right-section .main .insights{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.right-section .main .insights li{
+    padding: 24px;
+    background: var(--white);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+
+.right-section .main .insights li .bx{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .main .insights li:nth-child(1) .bx{
+    background: var(--light-blue);
+    color: var(--blue);
+}
+
+.right-section .main .insights li:nth-child(2) .bx{
+    background: var(--light-yellow);
+    color: var(--yellow);
+}
+
+.right-section .main .insights li:nth-child(3) .bx{
+    background: var(--light-green);
+    color: var(--green);
+}
+
+.right-section .main .insights li:nth-child(4) .bx{
+    background: var(--light-red);
+    color: var(--red);
+}
+
+.right-section .main .insights li .info h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.right-section .main .insights li .info p{
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.right-section .main .charts{
+    display: flex;   
+    justify-content: space-between;
+    margin-top: 15px;
+}
+

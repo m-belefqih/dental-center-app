@@ -1,0 +1,27 @@
+# === Java / Maven ===
+target/
+*.class
+*.war
+*.ear
+*.jar
+
+# === IDE files ===
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.build.xml
+
+# === Tomcat / Build ===
+build/
+.smarttomcat/

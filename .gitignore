@@ -3,7 +3,6 @@ target/
 *.class
 *.war
 *.ear
-*.jar
 
 # === IDE files ===
 # IntelliJ IDEA

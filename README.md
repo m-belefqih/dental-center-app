@@ -30,3 +30,11 @@ Avant de commencer, assurez-vous d’avoir installé :
 ```bash
 git clone https://github.com/votre-utilisateur/dental-center-app.git
 cd dental-center-app
+```
+
+## 📝 Notez que
+
+Si vous souhaitez utiliser le fichier des wireframes dans le dossier `maquettes` de ce projet, vous pouvez télécharger [Balsamiq Wireframes](https://balsamiq.com/).
+
+Pour prolonger indéfiniment votre période d'essai de Balsamiq Wireframes sur Windows et macOS, voir ce lien :  
+https://gist.github.com/HoussemNasri/c09e55e0e5f451aa10f8621a6680ba28

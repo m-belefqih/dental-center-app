@@ -112,3 +112,8 @@ textarea{
 	font-weight: bold;
 	font-size: 14px;
 }
+
+span{
+    color: var(--red);
+    font-weight: bold;
+}

@@ -37,15 +37,15 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="InputPrenom" class="form-label">Prénom *</label> 
+                                <label for="InputPrenom" class="form-label">Prénom <span>*</span></label> 
                                 <input type="text" name="prenom" class="form-control form-control-sm border-custom" id="InputPrenom" placeholder="Jhon" required>
                             </div>
                             <div class="mb-3">
-                                <label for="InputNom" class="form-label">Nom *</label> 
+                                <label for="InputNom" class="form-label">Nom <span>*</span></label> 
                                 <input type="text" name="nom" class="form-control form-control-sm border-custom" id="InputNom" placeholder="Doe" required>
                             </div>
                             <div class="mb-3">
-                                <label for="InputSexe" class="form-label">Sexe *</label> 
+                                <label for="InputSexe" class="form-label">Sexe <span>*</span></label> 
                                 <select class="form-select form-select-sm border-custom" name="sexe" id="InputSexe" required>
                                     <option value="">Sélectionnez votre sexe</option>
                                       <option value="Homme">Homme</option>
@@ -53,35 +53,35 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="InputDateNaissance" class="form-label">Date de naissance *</label> 
+                                <label for="InputDateNaissance" class="form-label">Date de naissance <span>*</span></label> 
                                 <input type="date" name="birthDate" class="form-control form-control-sm border-custom" id="InputDateNaissance" required>
                             </div>
                             <div class="mb-3">
-                                <label for="InputAdresse" class="col-form-label">Adresse *</label>
+                                <label for="InputAdresse" class="col-form-label">Adresse <span>*</span></label>
                                 <textarea name="adresse" class="form-control form-control-sm border-custom" id="InputAdresse" placeholder="123 Rue Exemple" required></textarea>
                             </div>
                              
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="InputCIN" class="form-label">CIN *</label> 
+                                <label for="InputCIN" class="form-label">CIN <span>*</span></label> 
                                 <input type="text" name="cin" class="form-control form-control-sm border-custom" id="InputCIN" placeholder="Carte d'identité nationale" required>
                             </div> 
                             <div class="mb-3">
-                                <label for="InputTelephone" class="form-label">Téléphone *</label> 
+                                <label for="InputTelephone" class="form-label">Téléphone <span>*</span></label> 
                                 <input type="text" name="telephone" class="form-control form-control-sm border-custom" id="InputTelephone" placeholder="Numéro de téléphone" required>
                             </div>
                             <div class="mb-3">
-                                <label for="InputEmail" class="form-label">E-mail *</label> 
+                                <label for="InputEmail" class="form-label">E-mail <span>*</span></label> 
                                 <input type="email" name="email" class="form-control form-control-sm border-custom" id="InputEmail" placeholder="jhon@exemple.com" required>
                             </div>
                             <p class="text-danger">${messageErreur}</p>
                             <div class="mb-3">
-                                <label for="InputPassword" class="form-label">Mot de passe *</label> 
+                                <label for="InputPassword" class="form-label">Mot de passe <span>*</span></label> 
                                 <input type="password" name="password" class="form-control form-control-sm border-custom" id="InputPassword" placeholder="8 caractères minimum" required>
                             </div>
                             <div class="mb-3">
-                                <label for="InputConfirmPassword" class="form-label">Confirmation mot de passe *</label> 
+                                <label for="InputConfirmPassword" class="form-label">Confirmation mot de passe <span>*</span></label> 
                                 <input type="password" class="form-control form-control-sm border-custom" id="InputConfirmPassword" required>
                             </div>
                         </div>   

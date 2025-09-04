@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2024-03-18" view-index="0" gantt-divider-location="525" resource-divider-location="300" version="3.3.3309" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="0"/>
+        <field id="tpd3" name="Nom" width="164" order="0"/>
+        <field id="tpd4" name="Date de début" width="96" order="1"/>
+        <field id="tpd5" name="Date de fin" width="130" order="2"/>
+        <field id="tpd6" name="Durée" width="134" order="3"/>
+        <option id="taskLabelDown" value=""/>
+        <option id="taskLabelRight" value="name"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#0070c0 #ff3300 #0033cc]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="4" uid="7a22151d139f4b99946b7b4808f4ff0d" name="Formation en JEE &amp; Bootstrap" color="#0070c0" meeting="false" start="2024-02-26" duration="60" complete="0" expand="true">
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="5" uid="b72a8b917683475292fe6b9fc52a120c" name="Formation en jQuery" color="#0070c0" meeting="false" start="2024-04-26" duration="12" complete="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="0" uid="c158790f95bd42d3ad6698be61d6b259" name="Etude de projet" color="#0070c0" meeting="false" start="2024-02-26" duration="20" complete="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" uid="947badd2651046259133028f601ce0ae" name="Création du cahier des charges" color="#0070c0" meeting="false" start="2024-03-17" duration="3" complete="0" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" uid="773d60d8bb92411fae3f27da25ab607b" name="Analyse des besoins" color="#0070c0" meeting="false" start="2024-03-20" duration="3" complete="0" expand="true">
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" uid="2f7eda8f32ac4961b7db8d3cf7d66c17" name="Conception du système" color="#0070c0" meeting="false" start="2024-03-23" duration="20" complete="0" expand="true"/>
+        <task id="6" uid="be37d2bd8f5144cfab89d0bdc043eb44" name="Création des maquettes" color="#0070c0" meeting="false" start="2024-05-08" duration="7" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="7" uid="4ec8ba20889a417ea6af9786c1186654" name="Développement de l'application" color="#0070c0" meeting="false" start="2024-05-15" duration="41" complete="0" expand="true">
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="8" uid="6cef138a56a349d888a42e5c843ffccb" name="Rédaction de rapport" color="#0070c0" meeting="false" start="2024-06-25" duration="12" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

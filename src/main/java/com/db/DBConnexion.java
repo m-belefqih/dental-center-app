@@ -24,7 +24,7 @@ public class DBConnexion {
 		try {
 			String url = "jdbc:mysql://localhost:3306/dental_center_db?useSSL=false";
 			String login = "root";
-			String passwd = "";
+			String passwd = "admin123";
 			
 			// Load JDBC Driver
 			Class.forName("com.mysql.cj.jdbc.Driver"); // MySql Driver Class Name

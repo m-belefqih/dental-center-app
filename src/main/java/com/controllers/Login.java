@@ -35,7 +35,7 @@ public class Login extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("accountType", accountType);
  
-		request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/authentification/login.jsp").forward(request, response);
 	}
 
 	 
@@ -61,7 +61,7 @@ public class Login extends HttpServlet {
 			}else {
 				String messageErreur = "L'adresse email ou le mot de passe est incorrect !";
 				request.setAttribute("messageErreur", messageErreur);
-				request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/authentification/login.jsp").forward(request, response);
 				
 				System.out.println("User login failure");
 			}
@@ -98,7 +98,7 @@ public class Login extends HttpServlet {
 			}else {
 				String messageErreur = "L'adresse email ou le mot de passe est incorrect !";
 				request.setAttribute("messageErreur", messageErreur);
-				request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/authentification/login.jsp").forward(request, response);
 				
 				System.out.println("User login failure");
 			}
@@ -118,7 +118,7 @@ public class Login extends HttpServlet {
 			}else {
 				String messageErreur = "L'adresse email ou le mot de passe est incorrect !";
 				request.setAttribute("messageErreur", messageErreur);
-				request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/authentification/login.jsp").forward(request, response);
 				
 				System.out.println("User login failure");
 			}

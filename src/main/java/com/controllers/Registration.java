@@ -25,7 +25,7 @@ public class Registration extends HttpServlet {
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.getRequestDispatcher("/WEB-INF/registration.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/authentification/registration.jsp").forward(request, response);
  
 	}
 
@@ -48,7 +48,7 @@ public class Registration extends HttpServlet {
 			
 			String messageErreur = "Cette adresse email est déjà utilisée !";
 			request.setAttribute("messageErreur", messageErreur);
-			request.getRequestDispatcher("/WEB-INF/registration.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/authentification/registration.jsp").forward(request, response);
 		
 		}else {
 			
@@ -64,7 +64,7 @@ public class Registration extends HttpServlet {
 				Patient patient = new Patient(email, password, cin, prenom, nom, birthDate, sexe, telephone, adresse);
 				session.setAttribute("patientInfo", patient);
 				
-				request.getRequestDispatcher("/WEB-INF/verificationOTP.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/authentification/verificationOTP.jsp").forward(request, response);
 			}
 			
 		}

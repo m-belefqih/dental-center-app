@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/dashboard.css"/>
     
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="<%=request.getContextPath()%>/resources/js/dashboard.js"></script>
      
 </head>
 
@@ -28,7 +27,7 @@
     <div class="right-section">
         <div class="navbar">
             <div class="title-welcome">
-                <h2><span>Bonjour</span> Admin,</h2>
+                <h2><span>Bonjour</span> Admin</h2>
             </div>
             <div class="iconsBtns-and-profile">
                 <div class="icons-btns">
@@ -102,7 +101,7 @@
                     <div id="donutchart" style="width: 420px; height: 340px;"></div>
                 </div>
             </div>
-       	
+            
         </div>
       
     </div> 

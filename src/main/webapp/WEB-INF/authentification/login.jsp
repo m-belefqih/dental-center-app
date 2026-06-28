@@ -18,7 +18,7 @@
     </head>
     <body class="d-flex flex-column">
         <div class="header d-flex align-items-center justify-content-between py-5 px-4">          
-                <a href="#">
+                <a href="index.jsp">
                     <img  class="custom-img" src="<%=request.getContextPath()%>/resources/images/logo-blue.png" alt="DENTAL CENTER"> 
                 </a>
                  

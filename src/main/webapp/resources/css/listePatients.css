@@ -44,9 +44,15 @@ a{
 
 .left-section{
     background: var(--white);
-    width: 217px;
-    height: 100%;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
     transition: all 0.3s ease;
+    z-index: 1000;
 }
 
 .left-section .sidebar{ 
@@ -105,9 +111,17 @@ a{
                     right-section / navbar
 =========================================================== */
 
+.right-section{
+    margin-left: 220px;
+}
+
 .right-section .myNavbar{
     background: var(--white);
     height: 90px;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.08);
 }
 
 .right-section .myNavbar .iconsBtns-and-profile{
@@ -262,4 +276,16 @@ a{
 
 #modifierPatientModal .custom-border-color{
 	border-color: var(--blue);
+}
+
+@media (max-width: 767px) {
+	.left-section {
+		position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    .right-section {
+        margin-left: 0;
+    }
 }

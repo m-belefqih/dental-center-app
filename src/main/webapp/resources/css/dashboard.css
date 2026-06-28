@@ -25,10 +25,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+ 
 body{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--light);
 }
 
@@ -43,13 +43,17 @@ a{
 .left-section{
     background: var(--white);
     width: 217px;
-    height: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;   
     padding: 25px 10px;
     transition: all 0.3s ease;
+    overflow: auto;
 }
 
 .left-section .sidebar{ 
@@ -97,9 +101,10 @@ a{
 =========================================================== */
 
 .right-section{
-    flex: 1;  /* flex-grow: 1; */
+    flex: 1;  
     display: flex;
     flex-direction: column;
+    margin-left: 217px;
 }
 
 .right-section .navbar{
@@ -109,6 +114,9 @@ a{
     height: 90px;
     padding: 25px;
     background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 20;
 }
 
 .right-section .navbar .title-welcome{

@@ -12,18 +12,16 @@
 	<title>DENTAL CENTER</title>
 	
 	<!-- CSS FILES -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"> <!-- REMIX ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!-- Font Awesome 5.15.4 -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS 5.3.3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">  <!-- REMIX ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  <!-- Font Awesome 5.15.4 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">   <!-- Bootstrap CSS 5.3.3 -->
 	
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/planification.css"/>
 	
 	<!-- JS FILES -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  <!-- New version of jQuery library -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS 5.3.3 -->
-	
-	<%-- <script src="<%=request.getContextPath()%>/resources/js/planification.js"></script> --%>
-	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  <!-- Bootstrap JS 5.3.3 -->
+		
 </head>
 <body class="d-flex">
 
@@ -52,12 +50,8 @@
         </div>   
 
         <div class="main flex-grow-1 d-flex flex-column p-4">
-			
-            <div class="header">
-                <h2>Planification</h2>  
-            </div>    
-
-			<c:if test="${messageWarning == 'Yes'}">
+        
+        	<c:if test="${messageWarning == 'Yes'}">
 				<div class="alert alert-warning alert-dismissible fade show" role="alert">
 					<i class="fas fa-exclamation-circle me-2"></i> 
 					Le <strong>${formattedDate}</strong> est déjà planifié. Veuillez sélectionner une autre date.
@@ -72,6 +66,10 @@
         			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     			</div>
 			</c:if>
+			
+            <div class="header">
+                <h2>Planification</h2>  
+            </div>    
 
             <form action="Planning" method="POST" class="content-main d-flex flex-column mt-4 p-3 ">
                 <div class="for-search d-flex justify-content-center">
@@ -136,87 +134,13 @@
 				</div>
 
             </form>
-        </div>
+        </div>    
     </div>
 
 
-	<%-- <form action="Planning" method="POST">
-
-		<p class="text-danger">${messageExist}</p>
-
-		<c:if test="${isPlanned == 'Yes'}">
-			<div class="alert alert-warning alert-dismissible fade show" role="alert">
-				<i class="fas fa-exclamation-circle me-2" style="font-size: 1.5em;"></i>
-				Le <strong>${formattedDate}</strong> est déjà planifié. Veuillez sélectionner une autre date.
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			</div>
-		</c:if>
-
-		<input class="form-control" id="myInput" type="date"
-			name="datePlanning" required> <br>
-
-		<h3>8h00 --> 12h00</h3>
-
-		<c:forEach var="dentiste" items="${dentistes}">
-
-			<p>
-				<input type="checkbox" name="dentistesMatin" value="${dentiste.id}" />${dentiste.prenom}
-				${dentiste.nom}
-			</p>
-
-		</c:forEach>
-
-		<hr>
-
-		<h3>14h00 --> 18h00</h3>
-
-		<c:forEach var="dentiste" items="${dentistes}">
-
-			<p>
-				<input type="checkbox" name="dentistesSoir" value="${dentiste.id}" />${dentiste.prenom} ${dentiste.nom}
-			</p>
-			 
-		</c:forEach>
-
-	 
-		<input type="submit" value="Enregistrer" />
-	</form> --%>
-
+	
 
 	<script>
-        /*$(document).ready(function() {
-            $('#myInput').on('change', function(event) {
-                 
-                    
-                	var selectedDate = $(this).val();
-                    
-                    
-                    $.ajax({
-             
-                        url: '/dental-center-app/Plannification/date',  
-            			async: false,  
-            			type: "POST",  
-            			data: { "selectedDate": selectedDate },
-                         
-                        success: function(data, textStatus, jqXHR) {
-                			if (data != "") {
-                				response = data;  
-                				 
-                			} else {
-                				response = '';  
-                			}  
-                		},
-                		 
-                		error: function(jqXHR, textStatus, errorThrown) {
-                			console.log("Something went wrong==>", errorThrown);  
-                			response = '';  
-                			 
-                			alert('exception, errorThrown==>' + errorThrown);
-                		}
-                    });
-                //}
-            });
-        });*/
         
         $(document).ready(function() {
             

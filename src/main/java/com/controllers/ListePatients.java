@@ -76,7 +76,7 @@ public class ListePatients extends HttpServlet {
 		List<Patient> patients = patientDAO.getAll();
 		System.out.println("getAllPatient, patients size ==> " + patients.size());
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/listePatients.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/gestionPatient/listePatients.jsp");
 		request.setAttribute("patients", patients);
 		dispatcher.forward(request, response);
 		

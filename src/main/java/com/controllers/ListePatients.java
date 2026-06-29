@@ -75,7 +75,26 @@ public class ListePatients extends HttpServlet {
 		
 		List<Patient> patients = patientDAO.getAll();
 		System.out.println("getAllPatient, patients size ==> " + patients.size());
-		
+
+		// Préparer le message de notification (succès) selon l'action effectuée
+		String message = request.getParameter("message");
+		if (message != null) {
+			switch (message) {
+				case "created":
+					request.setAttribute("messageSuccess", "Yes");
+					request.setAttribute("messageText", "Le patient a été ajouté avec succès.");
+					break;
+				case "updated":
+					request.setAttribute("messageSuccess", "Yes");
+					request.setAttribute("messageText", "Le patient a été modifié avec succès.");
+					break;
+				case "deleted":
+					request.setAttribute("messageSuccess", "Yes");
+					request.setAttribute("messageText", "Le(s) patient(s) ont été supprimé(s) avec succès.");
+					break;
+			}
+		}
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/gestionPatient/listePatients.jsp");
 		request.setAttribute("patients", patients);
 		dispatcher.forward(request, response);
@@ -141,8 +160,8 @@ public class ListePatients extends HttpServlet {
 		
 		boolean result = patientDAO.update(patient);
 		System.out.println("updatePatient, result is ==> " + result);
-		
-		response.sendRedirect(request.getContextPath() + "/ListePatients");
+
+		response.sendRedirect(request.getContextPath() + "/ListePatients?message=updated");
 		
 	}
 
@@ -166,8 +185,8 @@ public class ListePatients extends HttpServlet {
 		
 		boolean result = patientDAO.create(patient);
 		System.out.println("createNewPatient, result is ==> " + result);
-		
-		response.sendRedirect(request.getContextPath() + "/ListePatients");
+
+		response.sendRedirect(request.getContextPath() + "/ListePatients?message=created");
 		
 	}
 

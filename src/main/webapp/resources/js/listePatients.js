@@ -150,8 +150,8 @@ $(document).ready(function() {
 				} else {
 					response = ''; // If no data is returned, set response to an empty string
 				}
-				// Redirect to the main page of the patient CRUD app
-				window.location.href = '/dental-center-app/ListePatients';
+				// Redirect to the main page of the patient CRUD app (with success notification)
+				window.location.href = '/dental-center-app/ListePatients?message=deleted';
 			},
 			// Function to handle an error response
 			error: function(jqXHR, textStatus, errorThrown) {

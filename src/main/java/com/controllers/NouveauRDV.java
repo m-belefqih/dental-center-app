@@ -92,16 +92,18 @@ public class NouveauRDV extends HttpServlet {
 	private void takeNewAppointment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		int id = Integer.parseInt(request.getParameter("planningId"));
-		
+		String motifRDV = request.getParameter("motifRDV");
+
 		PlannificationDAO plannificationDAO = new PlannificationDAOImpl();
 		Plannification plannification = plannificationDAO.getById(id);
-		
+
 		HttpSession session = request.getSession();
 		Patient patient = (Patient) session.getAttribute("user");
-		
+
 		RendezVous rdv = new RendezVous();
 		rdv.setPlannification(plannification);
 		rdv.setPatient(patient);
+		rdv.setMotifRDV(motifRDV);
 		
 		RendezVousDAO rendezVousDAO = new RendezVousDAOImpl();
 	    boolean result = rendezVousDAO.create(rdv);

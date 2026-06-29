@@ -54,12 +54,13 @@ $(document).ready(function() {
 		 
 		 
 		 var planningId = bookingPlanning;
-    
+		 var motifRDV = $("#motifSelect").val();
+
     $.ajax({
-		url: '/dental-center-app/NouveauRDV/prendre', 
-		async: false,  
-		type: "POST", 
-		data: { "planningId": planningId },  
+		url: '/dental-center-app/NouveauRDV/prendre',
+		async: false,
+		type: "POST",
+		data: { "planningId": planningId, "motifRDV": motifRDV },
 		
 		success: function(data, textStatus, jqXHR) {
 			if (data != "") {

@@ -172,7 +172,7 @@
 					<div class="modal-body">
 						<p>Choisissez votre motif de rendez-vous *</p>
 						<div class="mb-3"> 
-							<select class="form-select" size="7" multiple aria-label="size 7 select example">
+							<select class="form-select" id="motifSelect" size="7" aria-label="size 7 select example">
 							  <option value="Consultation dentaire" selected>Consultation dentaire</option>
 							  <option value="Urgence dentaire">Urgence dentaire</option>
 							  <option value="Traitement dentaire">Traitement dentaire</option>

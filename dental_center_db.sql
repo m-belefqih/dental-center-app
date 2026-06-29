@@ -73,11 +73,16 @@ CREATE TABLE IF NOT EXISTS `patient` (
 --
 
 INSERT INTO `patient` (`id`, `email`, `password`, `cin`, `prenom`, `nom`, `birthDate`, `sexe`, `telephone`, `adresse`) VALUES
-(1, 'omar@gmail.com', 'omar1234', 'LB6TY29', 'Omar', 'El Khayatti', '2002-12-01', 'Homme', '07 72 05 21 27', 'HAY ANDALOUS RUE 12'),
-(2, 'amane@gmail.com', 'amane1234', 'JHT9I', 'Amane', 'Stitou', '1997-07-14', 'Femme', '06 44 23 21 10', 'HAY ANDALOUS RUE 14'),
-(3, 'ahmed@gmail.com', 'ahmed1234', 'YJIO14', 'Ahmed', 'Hlimi', '2000-09-17', 'Homme', '07 89 12 43 33', 'HAY ANDALOUS RUE 21'),
+(1, 'omar@gmail.com', 'omar1234', 'LB6TY29', 'Omar', 'El Khayatti', '2002-12-01', 'Homme', '07 72 05 21 27', 'HAY LALA MARYEM RUE 12'),
+(2, 'amane@gmail.com', 'amane1234', 'JHT9I', 'Amane', 'Stitou', '1997-07-14', 'Femme', '06 44 23 21 10', 'HAY RAHMA RUE 14'),
+(3, 'ahmed@gmail.com', 'ahmed1234', 'YJIO14', 'Ahmed', 'Hlimi', '2000-09-17', 'Homme', '07 89 12 43 33', 'SIDI FATEH RUE 21'),
 (4, 'chaimae@gmail.com', 'chaimae1234', 'JK120B', 'Chaimae', 'Saloui', '1999-02-11', 'Femme', '07 77 77 55 33', 'SOUK SBAT RUE 2'),
-(5, 'badr@gmail.com', 'badr1234', 'Q3JN0A', 'Badr', 'Slimani', '2004-10-07', 'Homme', '06 66 12 23 35', 'HAY LALA RAHMA RUE 13');
+(5, 'badr@gmail.com', 'badr1234', 'Q3JN0A', 'Badr', 'Slimani', '2004-10-07', 'Homme', '06 66 12 23 35', 'HAY LALA RAHMA RUE 13'),
+(6, 'sara@gmail.com', 'sara1234', 'MN45AB', 'Sara', 'Alami', '2001-05-22', 'Femme', '06 12 34 56 78', 'HAY RIAD RUE 8'),
+(7, 'youssef@gmail.com', 'youssef1234', 'RT78CD', 'Youssef', 'Bennani', '1998-11-03', 'Homme', '07 11 22 33 44', 'BAB AL BAHAR RUE 15'),
+(8, 'fatima@gmail.com', 'fatima1234', 'UV90EF', 'Fatima', 'Zahra', '2003-08-16', 'Femme', '06 98 76 54 32', 'HAY SALAM RUE 4'),
+(9, 'ayoub@gmail.com', 'ayoub1234', 'WX12GH', 'Ayoub', 'Mansouri', '2000-01-29', 'Homme', '07 65 43 21 09', 'HAY NOUR RUE 19'),
+(10, 'khadija@gmail.com', 'khadija1234', 'JK34LM', 'Khadija', 'Ait El Haj', '1996-09-10', 'Femme', '06 22 11 44 55', 'SIDI MOUSSA RUE 3');
 
 -- ---------------------------------------------------------------------------------
 
@@ -104,7 +109,9 @@ CREATE TABLE IF NOT EXISTS `dentiste` (
 INSERT INTO `dentiste` (`id`, `email`, `password`, `cin`, `prenom`, `nom`, `specialty`) VALUES
 (1, 'hamza@gmail.com', 'hamza1234', 'LQJ2X4', 'Hamza', 'Kentri', 'Orthodontie'),
 (2, 'asmae@gmail.com', 'asmae1234', 'BH83SD', 'Asmae', 'Zyani', 'dentisterie-esthétique'),
-(3, 'aymane@gmail.com', 'aymane1234', 'LP12OF', 'Aymane', 'Mahmoudi', 'Parodontologie');
+(3, 'aymane@gmail.com', 'aymane1234', 'LP12OF', 'Aymane', 'Mahmoudi', 'Parodontologie'),
+(4, 'salma@gmail.com', 'salma1234', 'SR45KL', 'Salma', 'Benali', 'Orthodontie'),
+(5, 'yassine@gmail.com', 'yassine1234', 'YS78MN', 'Yassine', 'El Idrissi', 'Parodontologie');
 
 -- ---------------------------------------------------------------------------------
 
@@ -131,8 +138,12 @@ CREATE TABLE IF NOT EXISTS `plannification` (
 
 INSERT INTO `plannification` (`id`, `jour`, `from_T`, `to_T`, `id_dentiste`, `id_admin`) VALUES
 (1, '2024-07-12', '08h00', '12h00', 2, 1),
-(2, '2024-07-25', '14h00', '18h00', 3, 1),
-(3, '2024-08-05', '08h00', '12h00', 1, 1);
+(2, '2024-07-12', '14h00', '18h00', 3, 1),
+(3, '2024-08-12', '08h00', '12h00', 1, 1),
+(4, '2024-07-25', '08h00', '12h00', 1, 1),
+(5, '2024-07-25', '08h00', '12h00', 2, 1),
+(6, '2024-07-25', '14h00', '18h00', 4, 1),
+(7, '2024-07-25', '14h00', '18h00', 5, 1);
 
 -- ---------------------------------------------------------------------------------
 
@@ -160,9 +171,14 @@ CREATE TABLE IF NOT EXISTS `rendezvous` (
 --
 
 INSERT INTO `rendezvous` (`id`, `dateRDV`, `motifRDV`, `actes`, `examensRadio`, `traitements`, `id_patient`, `id_plannification`) VALUES
-(1, '2024-07-12', 'Consultation', NULL, NULL, NULL, 2, 1),
-(2, '2024-07-25', 'Douleur dentaire', 'Carie profonde détectée', 'Présence de carie profonde sur la dent 18', 'Doliprane', 5, 2),
-(3, '2024-08-05', 'Douleur dentaire', 'Carie profonde détectée', 'Présence de carie profonde sur la dent 10', 'Doliprane', 2, 3);
+(1, '2024-07-12', 'Consultation', NULL, NULL, NULL, 1, 1),
+(2, '2024-07-12', 'Douleur dentaire', 'Carie profonde détectée', 'Présence de carie profonde sur la dent 18', 'Doliprane', 5, 2),
+(3, '2024-08-12', 'Douleur dentaire', 'Carie profonde détectée', 'Présence de carie profonde sur la dent 10', 'Doliprane', 3, 3),
+(4, '2024-07-25', 'Contrôle orthodontique', NULL, NULL, NULL, 4, 4),
+(5, '2024-07-25', 'Détartrage', NULL, NULL, NULL, 6, 5),
+(6, '2024-07-25', 'Saignement des gencives', NULL, NULL, NULL, 7, 6),
+(7, '2024-07-25', 'Blanchiment', NULL, NULL, NULL, 8, 7),
+(8, '2024-07-25', 'Contrôle annuel', NULL, NULL, NULL, 9, 4);
 
 -- ---------------------------------------------------------------------------------
 

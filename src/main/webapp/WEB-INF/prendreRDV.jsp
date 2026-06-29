@@ -28,7 +28,7 @@
 
 <body class="d-flex">
      
-	<jsp:include page="sidebarPatient.jsp"></jsp:include>
+	<jsp:include page="sidebar/sidebarPatient.jsp"></jsp:include>
 
     <div class="right-section flex-grow-1 d-flex flex-column">       
         <div class="myNavbar d-flex align-items-center justify-content-end p-4">

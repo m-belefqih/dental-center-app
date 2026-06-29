@@ -40,10 +40,10 @@
      
     <c:choose>
     	<c:when test="${accountType == 'admin'}">
-			<jsp:include page="sidebarAdmin.jsp"></jsp:include>
+			<jsp:include page="sidebar/sidebarAdmin.jsp"></jsp:include>
     	</c:when>
     	<c:when test="${accountType == 'dentiste'}">
-			<jsp:include page="sidebarDentiste.jsp"></jsp:include>
+			<jsp:include page="sidebar/sidebarDentiste.jsp"></jsp:include>
     	</c:when>
     </c:choose>
 
@@ -244,7 +244,7 @@
 						</div>
 					</div>
 				</div>
-	
+
 				<input type="hidden" name="nbrRDV" value="<%=i%>" >
 				
 				 

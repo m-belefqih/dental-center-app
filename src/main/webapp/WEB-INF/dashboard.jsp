@@ -22,7 +22,7 @@
 
 <body>
 	
-	<jsp:include page="sidebarAdmin.jsp"></jsp:include>
+	<jsp:include page="sidebar/sidebarAdmin.jsp"></jsp:include>
 
     <div class="right-section">
         <div class="navbar">

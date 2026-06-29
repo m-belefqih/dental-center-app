@@ -84,60 +84,55 @@ public class Planning extends HttpServlet {
 			doGet(request, response);
 			
 		}else {
-			
+
 			DentisteDAO dentisteDAO = new DentisteDAOImpl();
-			
+
 			HttpSession session = request.getSession();
 			Admin admin = (Admin) session.getAttribute("user");
-			
+
 			String dentistesMatin[] = request.getParameterValues("dentistesMatin");
-			
-			System.out.println(dentistesMatin.length);
-			
-			if (dentistesMatin != null && dentistesMatin.length != 0) {
-				
-				for (int i = 0; i < dentistesMatin.length; i++) {
-								
-					Dentiste dentiste = dentisteDAO.getById(Integer.parseInt(dentistesMatin[i]));
-					
-					Plannification plannification = new Plannification();
-					plannification.setJour(datePlanning);
-					plannification.setFrom_T("08h00");
-					plannification.setTo_T("12h00");
-					plannification.setDentiste(dentiste);
-					plannification.setAdmin(admin);
-								 
-					boolean result1 = plannificationDAO.create(plannification);
-					
-					System.out.println("The schedule of dentist " + (i+1) + " in the morning is ==> " + result1);
-					
-				}
-			}
-			
 			String dentistesSoir[] = request.getParameterValues("dentistesSoir");
-			
-			System.out.println(dentistesSoir.length);
-			
-			if (dentistesSoir != null && dentistesSoir.length != 0) {
-				
-				for (int i = 0; i < dentistesSoir.length; i++) {
-								
-					Dentiste dentiste = dentisteDAO.getById(Integer.parseInt(dentistesSoir[i]));
-					
-					Plannification plannification = new Plannification();
-					plannification.setJour(datePlanning);
-					plannification.setFrom_T("14h00");
-					plannification.setTo_T("18h00");
-					plannification.setDentiste(dentiste);
-					plannification.setAdmin(admin);
-								 
-					boolean result1 = plannificationDAO.create(plannification);
-					
-					System.out.println("The schedule of dentist " + (i+1) + " in the evening is ==> " + result1);
-					
-				}
+
+			// Vérifier qu'au moins un dentiste est sélectionné pour chaque plage horaire.
+			// getParameterValues retourne null si aucune case n'est cochée.
+			if (dentistesMatin == null || dentistesMatin.length == 0
+					|| dentistesSoir == null || dentistesSoir.length == 0) {
+
+				request.setAttribute("messageDanger", "Yes");
+				doGet(request, response);
+				return;
 			}
-			
+
+			for (int i = 0; i < dentistesMatin.length; i++) {
+
+				Dentiste dentiste = dentisteDAO.getById(Integer.parseInt(dentistesMatin[i]));
+
+				Plannification plannification = new Plannification();
+				plannification.setJour(datePlanning);
+				plannification.setFrom_T("08h00");
+				plannification.setTo_T("12h00");
+				plannification.setDentiste(dentiste);
+				plannification.setAdmin(admin);
+
+				plannificationDAO.create(plannification);
+
+			}
+
+			for (int i = 0; i < dentistesSoir.length; i++) {
+
+				Dentiste dentiste = dentisteDAO.getById(Integer.parseInt(dentistesSoir[i]));
+
+				Plannification plannification = new Plannification();
+				plannification.setJour(datePlanning);
+				plannification.setFrom_T("14h00");
+				plannification.setTo_T("18h00");
+				plannification.setDentiste(dentiste);
+				plannification.setAdmin(admin);
+
+				plannificationDAO.create(plannification);
+
+			}
+
 			LocalDate date = LocalDate.parse(datePlanning);
 			
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.FRENCH);

@@ -148,9 +148,18 @@
 
 					<div class="planning-list mt-4">
 
-						<h4 class="planning-list-title mb-3">Jours planifiés</h4>
+						<div class="planning-list-header d-flex justify-content-between align-items-center mb-3">
+							<h4 class="planning-list-title mb-0">Jours planifiés</h4>
+							<div class="for-search">
+								<input class="form-control" id="searchPlanning" type="search" placeholder="Chercher par date (AAAA-MM-JJ)" aria-label="Search">
+							</div>
+						</div>
+
+						<div id="planningResults">
 
 						<c:forEach var="entry" items="${planningsParJour}" varStatus="status">
+
+							<div class="planning-day" data-date="${entry.key}">
 
 							<div class="row mb-2">
 								<div class="col">
@@ -221,7 +230,15 @@
 								</div>
 							</div>
 
+							</div><!-- .planning-day -->
+
 						</c:forEach>
+
+						</div><!-- #planningResults -->
+
+						<div id="noResultPlanning" class="text-muted text-center mt-3" style="display: none;">
+							Aucune planification trouvée pour cette date.
+						</div>
 
 					</div>
 
@@ -267,6 +284,24 @@
             $('.toggle-planning').on('click', function() {
                 $(this).toggleClass('active');
             });
+
+            // Recherche d'une planification par date (AAAA-MM-JJ)
+            $('#searchPlanning').on('keyup', function() {
+                var value = $(this).val().toLowerCase();
+                var visibleCount = 0;
+
+                $('.planning-day').each(function() {
+                    var date = $(this).attr('data-date').toLowerCase();
+                    if (date.indexOf(value) > -1) {
+                        $(this).show();
+                        visibleCount++;
+                    } else {
+                        $(this).hide();
+                    }
+                });
+
+                $('#noResultPlanning').toggle(visibleCount === 0);
+            });
         });
     </script>
 
@@ -283,6 +318,11 @@
 			border-left: 3px solid var(--grey, #999);
 			height: 100%;
 			min-height: 40px;
+		}
+
+		.planning-list .for-search .form-control {
+			width: 280px;
+			border-color: var(--blue, #1D92F1);
 		}
 	</style>
 

@@ -25,7 +25,7 @@
 <body class="d-flex">
 
 	<!-- siderbar admin  -->
-    <jsp:include page="sidebarPatient.jsp"></jsp:include>
+    <jsp:include page="../sidebar/sidebarAdmin.jsp"></jsp:include>
 
     <div class="right-section flex-grow-1 d-flex flex-column">
         <div class="myNavbar d-flex align-items-center justify-content-end p-4">
@@ -37,10 +37,10 @@
                 </div>
                 <div class="profile d-flex align-items-center justify-content-between">
                     <div class="info d-flex align-items-center">
-                        <img src="<%=request.getContextPath()%>/resources/images/men.png">
+                        <img src="<%=request.getContextPath()%>/resources/images/profile.png">
                         <div class="account">
                             <a href="Profile"><h5>${user.prenom} ${user.nom}</h5></a>
-                            <p>Patient</p>
+                            <p>Administrateur</p>
                         </div>
                     </div>
                     <i class="ri-arrow-down-s-line"></i>
@@ -59,7 +59,7 @@
                 <!-- FAQ sections -->
                 <div class="faq-container">
                 	
-                	<h2 class="faq-title mb-2">Gestion des test</h2>
+                	<h2 class="faq-title mb-2">Gestion des patients</h2>
                     
                     <section class="faq-section">
                         <p class="faq-question"><strong>Comment puis-je ajouter un patient ?</strong></p>

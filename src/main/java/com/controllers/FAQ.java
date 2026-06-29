@@ -23,15 +23,15 @@ public class FAQ extends HttpServlet {
         
         if (accountType.equals("patient")) {
         	
-        	request.getRequestDispatcher("/WEB-INF/faqPatient.jsp").forward(request, response);
+        	request.getRequestDispatcher("/WEB-INF/faq/faqPatient.jsp").forward(request, response);
         	
 		}else if (accountType.equals("dentiste")) {
 			
-			request.getRequestDispatcher("/WEB-INF/faqDentiste.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/faq/faqDentiste.jsp").forward(request, response);
 			
 		}else if (accountType.equals("admin")) {
 			
-			request.getRequestDispatcher("/WEB-INF/faqAdmin.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/faq/faqAdmin.jsp").forward(request, response);
 			
 		}
 		

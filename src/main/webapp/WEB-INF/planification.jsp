@@ -59,12 +59,20 @@
 				</div>
 			</c:if>
 			
-			<c:if test="${messageSuccess == 'Yes'}">	 
+			<c:if test="${messageSuccess == 'Yes'}">
 				<div class="alert alert-success alert-dismissible fade show" role="alert">
         			<i class="fas fa-check-circle me-2"></i>
         			Le <strong>${formattedDate}</strong> a été planifié avec succès.
         			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     			</div>
+			</c:if>
+
+			<c:if test="${messageDanger == 'Yes'}">
+				<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					<i class="fas fa-exclamation-triangle me-2"></i>
+					Veuillez sélectionner <strong>au moins un dentiste</strong> pour chaque plage horaire (8h00 - 12h00 et 14h00 - 18h00).
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
 			</c:if>
 			
             <div class="header">

@@ -48,12 +48,14 @@
 	</div>
 	
 	<div class="sign-out">
-		<a href="Logout" class="d-flex align-items-center"> 
+		<a href="Logout" onclick="openLogoutModal(event)" class="d-flex align-items-center">
 			<i class="ri-logout-box-r-line"></i>
 			<h3>Se déconnecter</h3>
 		</a>
 	</div>
 </div>
+
+<jsp:include page="logoutModal.jsp"></jsp:include>
    
 
    

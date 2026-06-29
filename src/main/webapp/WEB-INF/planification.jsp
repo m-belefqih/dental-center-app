@@ -80,8 +80,9 @@
             </div>    
 
             <form action="Planning" method="POST" class="content-main d-flex flex-column mt-4 p-3 ">
-                <div class="for-search d-flex justify-content-center">
-                    <input class="form-control" name="datePlanning" type="date" style="width: 300px;" required> 
+                <div class="for-search d-flex justify-content-end align-items-center gap-2">
+                    <input class="form-control" name="datePlanning" type="date" style="width: 300px;" required>
+                    <button class="btn btn-success" type="submit"><b>Enregistrer</b></button>
                 </div>
 
                 <div class="row custom-border mt-3 m-1 ">
@@ -128,18 +129,6 @@
                         
                     </div> 
                 </div>
-
-                <p class="title mt-3" style="color: red; font-weight: bold;">NB : La sélection est limitée à 5 dentistes pour chaque plage d'horaire !</p>
-
-          
- 
-                <div class="row">
-					<div class="col">
-						<div class="submit-button d-flex align-items-center justify-content-center">
-							<button class="btn btn-success" type="submit"><b>Enregistrer</b></button>
-						</div>
-					</div>
-				</div>
 
 				<!-- ==========================================================
 				        Liste des jours déjà planifiés (récent -> ancien)

@@ -16,7 +16,7 @@
 			</a>
 		</div>
 		<div class="item">
-			<a href="#" class="d-flex align-items-center"> 
+			<a href="/dental-center-app/MonDossierMedical" class="d-flex align-items-center">
 				<i class="ri-id-card-line"></i>
 				<h3>Mon dossier</h3>
 			</a>

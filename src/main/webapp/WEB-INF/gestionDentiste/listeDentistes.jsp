@@ -61,6 +61,15 @@
         </div>   
 
         <div class="main flex-grow-1 d-flex flex-column p-4">
+
+        	<c:if test="${messageSuccess == 'Yes'}">
+				<div class="alert alert-success alert-dismissible fade show" role="alert">
+					<i class="fas fa-check-circle me-2"></i>
+					${messageText}
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			</c:if>
+
             <div class="header d-flex align-items-center justify-content-between">
                 <h2>Liste des dentistes</h2>
             </div>

@@ -118,8 +118,8 @@ $(document).ready(function() {
 				} else {
 					response = ''; // If no data is returned, set response to an empty string
 				}
-				// Redirect to the main page of the dentist CRUD app
-				window.location.href = '/dental-center-app/ListeDentistes';
+				// Redirect to the main page of the dentist CRUD app (with success notification)
+				window.location.href = '/dental-center-app/ListeDentistes?message=deleted';
 			},
 			// Function to handle an error response
 			error: function(jqXHR, textStatus, errorThrown) {

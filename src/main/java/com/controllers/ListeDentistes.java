@@ -76,7 +76,14 @@ public class ListeDentistes extends HttpServlet {
 		
 		List<Dentiste> dentistes = dentisteDAO.getAll();
 		System.out.println("getAllDentist, dentists size ==> " + dentistes.size());
-		
+
+		// Préparer le message de notification (succès) pour les actions effectuées via redirection (suppression AJAX)
+		String message = request.getParameter("message");
+		if (message != null && "deleted".equals(message)) {
+			request.setAttribute("messageSuccess", "Yes");
+			request.setAttribute("messageText", "Le(s) dentiste(s) ont été supprimé(s) avec succès.");
+		}
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/gestionDentiste/listeDentistes.jsp");
 		request.setAttribute("dentistes", dentistes);
 		dispatcher.forward(request, response);
@@ -141,6 +148,9 @@ public class ListeDentistes extends HttpServlet {
 		boolean result = dentisteDAO.update(dentiste);
 		System.out.println("updateDentist, result is ==> " + result);
 
+		request.setAttribute("messageSuccess", "Yes");
+		request.setAttribute("messageText", "Le dentiste a été modifié avec succès.");
+
 		getAllDentist(request, response);
 		
 	}
@@ -166,6 +176,9 @@ public class ListeDentistes extends HttpServlet {
 
 		boolean result = dentisteDAO.create(dentiste);
 		System.out.println("createNewDentist, result is ==> " + result);
+
+		request.setAttribute("messageSuccess", "Yes");
+		request.setAttribute("messageText", "Le dentiste a été ajouté avec succès.");
 
 		getAllDentist(request, response);
 		

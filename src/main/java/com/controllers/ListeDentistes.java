@@ -77,7 +77,7 @@ public class ListeDentistes extends HttpServlet {
 		List<Dentiste> dentistes = dentisteDAO.getAll();
 		System.out.println("getAllDentist, dentists size ==> " + dentistes.size());
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/listeDentistes.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/gestionDentiste/listeDentistes.jsp");
 		request.setAttribute("dentistes", dentistes);
 		dispatcher.forward(request, response);
 		

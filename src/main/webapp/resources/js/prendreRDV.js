@@ -1,10 +1,21 @@
-/**** Filter table rows ****/
+/**** Filter table rows on search button click ****/
 $(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
+
+  function filterTableByDate() {
+    var value = $("#myInput").val().toLowerCase();
     $("#myTable tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
+  }
+
+  // Filter only when the search button is clicked
+  $("#searchBtn").on("click", filterTableByDate);
+
+  // Prevent the Enter key from triggering the filter / submitting
+  $("#myInput").on("keydown", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
   });
 });
 

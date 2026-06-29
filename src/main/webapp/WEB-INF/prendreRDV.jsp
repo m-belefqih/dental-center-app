@@ -74,7 +74,10 @@
 
             <div class="table-main d-flex flex-column p-3 ">
                 <div class="for-search d-flex justify-content-center">
-                    <input class="form-control" id="myInput" type="date" style="width: 300px;">  
+                    <input class="form-control" id="myInput" type="date" style="width: 300px;">
+                    <button class="btn btn-primary ms-2" id="searchBtn" type="button">
+                        <i class="fas fa-search me-1"></i> Rechercher
+                    </button>
                 </div>
 
                 <div class="table-content mt-3">

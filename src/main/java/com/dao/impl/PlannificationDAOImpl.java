@@ -55,6 +55,43 @@ public class PlannificationDAOImpl implements PlannificationDAO {
 	}
 
 	@Override
+	public List<Plannification> getAllOrderedByDayDesc() {
+
+		try {
+			// jour est stocké au format ISO (yyyy-MM-dd), donc le tri lexicographique
+			// correspond au tri chronologique : du plus récent au plus ancien.
+			String query = "SELECT * FROM plannification ORDER BY jour DESC, from_T ASC";
+			PreparedStatement preSt = connexion.prepareStatement(query);
+
+			ResultSet rs = preSt.executeQuery();
+
+			List<Plannification> plannifications = new ArrayList<Plannification>();
+
+			while (rs.next()) {
+
+				Plannification plannification = new Plannification();
+
+				plannification.setId(rs.getInt("id"));
+				plannification.setJour(rs.getString("jour"));
+				plannification.setFrom_T(rs.getString("from_T"));
+				plannification.setTo_T(rs.getString("to_T"));
+				plannification.setDentiste(dentisteDAO.getById(rs.getInt("id_dentiste")));
+				plannification.setAdmin(adminDAO.getById(rs.getInt("id_admin")));
+
+				plannifications.add(plannification);
+
+			}
+
+			return plannifications;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
+	@Override
 	public Plannification getById(int plannificationId) {
 		
 		try {

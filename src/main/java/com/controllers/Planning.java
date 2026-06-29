@@ -3,6 +3,8 @@ package com.controllers;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -33,11 +35,31 @@ public class Planning extends HttpServlet {
 
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
  		DentisteDAO dentisteDAO = new DentisteDAOImpl();
 		List<Dentiste> dentistes = dentisteDAO.getAll();
-		
+
 		request.setAttribute("dentistes", dentistes);
+
+		// Récupérer toutes les planifications (du plus récent au plus ancien)
+		// puis les regrouper par jour en conservant l'ordre.
+		PlannificationDAO plannificationDAO = new PlannificationDAOImpl();
+		List<Plannification> plannifications = plannificationDAO.getAllOrderedByDayDesc();
+
+		LinkedHashMap<String, List<Plannification>> planningsParJour = new LinkedHashMap<String, List<Plannification>>();
+
+		if (plannifications != null) {
+			for (Plannification plannification : plannifications) {
+				String jour = plannification.getJour();
+				if (!planningsParJour.containsKey(jour)) {
+					planningsParJour.put(jour, new ArrayList<Plannification>());
+				}
+				planningsParJour.get(jour).add(plannification);
+			}
+		}
+
+		request.setAttribute("planningsParJour", planningsParJour);
+
 		request.getRequestDispatcher("/WEB-INF/planification.jsp").forward(request, response);
 	}
 

@@ -238,6 +238,53 @@ a{
 	border-color: var(--dark-green);
 }
 
+/* ==========================================================
+              right-section / main / planning-list
+=========================================================== */
+
+.right-section .main .content-main .planning-list .planning-list-title{
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.right-section .main .content-main .planning-list .planning-card{
+    border: 2px solid var(--blue);
+    border-radius: 15px;
+}
+
+.right-section .main .content-main .planning-list .vertical-line-list{
+    border-left: 3px solid var(--grey);
+    height: 100%;
+    min-height: 30px;
+}
+
+.right-section .main .content-main .planning-list .toggle-planning{
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.right-section .main .content-main .planning-list .toggle-planning .fa-caret-right{
+    transition: transform 0.3s;
+}
+
+.right-section .main .content-main .planning-list .toggle-planning.active .fa-caret-right{
+    transform: rotate(90deg);
+}
+
+.right-section .main .content-main .planning-list .all-dentists-list{
+    background: var(--light-blue);
+    border-radius: 10px;
+    min-height: 60px;
+}
+
+.right-section .main .content-main .planning-list .all-dentists-list .dentist-item-list{
+    padding: 6px 4px;
+}
+
+.right-section .main .content-main .planning-list .all-dentists-list .dentist-item-list i{
+    color: var(--blue-btn);
+}
+
 @media (max-width: 767px) {
 	.left-section {
 		position: relative;

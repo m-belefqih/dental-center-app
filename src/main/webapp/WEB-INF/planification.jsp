@@ -133,6 +133,92 @@
 					</div>
 				</div>
 
+				<!-- ==========================================================
+				        Liste des jours déjà planifiés (récent -> ancien)
+				=========================================================== -->
+				<c:if test="${!empty planningsParJour}">
+
+					<div class="planning-list mt-4">
+
+						<h4 class="planning-list-title mb-3">Jours planifiés</h4>
+
+						<c:forEach var="entry" items="${planningsParJour}" varStatus="status">
+
+							<div class="row mb-2">
+								<div class="col">
+									<div class="card mb-0 planning-card">
+										<div class="card-body">
+											<div class="row align-items-center">
+												<div class="col-sm-1">
+													<a class="toggle-planning" data-bs-toggle="collapse" href="#collapseDay${status.count}" aria-expanded="false" aria-controls="collapseDay${status.count}">
+														<i class="fas fa-caret-right" style="font-size: 30px;"></i>
+													</a>
+												</div>
+												<div class="col-sm-3 d-flex align-items-center">
+													<p class="mb-0 ms-3 fw-bold">Planification</p>
+												</div>
+											
+												<div class="col-sm-7 d-flex align-items-center">
+													<p class="mb-0">${entry.key}</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row collapse mb-3" id="collapseDay${status.count}">
+								<div class="col">
+									<div class="card mb-0 planning-card">
+										<div class="card-body">
+											<div class="row">
+
+												<div class="col">
+													<div class="d-flex justify-content-center">
+														<h5 class="text-primary" style="font-weight: 800;">8h00 - 12h00</h5>
+													</div>
+													<div class="all-dentists-list mt-3 p-3">
+														<c:forEach var="planning" items="${entry.value}">
+															<c:if test="${planning.from_T == '08h00'}">
+																<div class="dentist-item-list d-flex align-items-center">
+																	<h6 class="mb-0">Dr. ${planning.dentiste.nom} ${planning.dentiste.prenom}</h6>
+																</div>
+															</c:if>
+														</c:forEach>
+													</div>
+												</div>
+
+												<div class="col-sm-1 d-flex justify-content-center">
+													<div class="vertical-line-list"></div>
+												</div>
+
+												<div class="col">
+													<div class="d-flex justify-content-center">
+														<h5 class="text-primary" style="font-weight: 800;">14h00 - 18h00</h5>
+													</div>
+													<div class="all-dentists-list mt-3 p-3">
+														<c:forEach var="planning" items="${entry.value}">
+															<c:if test="${planning.from_T == '14h00'}">
+																<div class="dentist-item-list d-flex align-items-center">
+																	<h6 class="mb-0">Dr. ${planning.dentiste.nom} ${planning.dentiste.prenom}</h6>
+																</div>
+															</c:if>
+														</c:forEach>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</c:forEach>
+
+					</div>
+
+				</c:if>
+
             </form>
         </div>    
     </div>
@@ -168,8 +254,29 @@
                     $('.dentistEvening-checkbox').prop('disabled', false);
                 }
             });
+
+            // Rotation de l'icône au clic sur un jour planifié
+            $('.toggle-planning').on('click', function() {
+                $(this).toggleClass('active');
+            });
         });
     </script>
-	
+
+	<style>
+		.toggle-planning .fa-caret-right {
+			transition: transform 0.3s;
+		}
+
+		.toggle-planning.active .fa-caret-right {
+			transform: rotate(90deg);
+		}
+
+		.planning-list .vertical-line-list {
+			border-left: 3px solid var(--grey, #999);
+			height: 100%;
+			min-height: 40px;
+		}
+	</style>
+
 </body>
 </html>

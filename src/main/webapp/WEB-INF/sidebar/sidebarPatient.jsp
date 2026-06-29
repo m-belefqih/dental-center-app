@@ -28,7 +28,7 @@
 			</a>
 		</div>
 		<div class="item">
-        	<a href="#" class="d-flex align-items-center"> 
+        	<a href="/dental-center-app/MonHistorique" class="d-flex align-items-center"> 
             	<i class="ri-history-line"></i>
                 <h3>Mon historique</h3>
         	</a>

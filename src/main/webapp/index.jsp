@@ -40,7 +40,7 @@
     <div class="main" id="main">
         <div class="left">
              
-            <h3>Un <span>centre dentaire</span> en qui vous pouvez avoir confiance</h3>
+            <h3>Un <span>Centre Dentaire</span> en qui vous pouvez avoir confiance</h3>
 
             <p>
                 Chez DENTAL CENTER, nous nous engageons à vous fournir des soins dentaires exceptionnels. 

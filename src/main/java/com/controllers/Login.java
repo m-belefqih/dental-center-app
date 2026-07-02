@@ -54,7 +54,7 @@ public class Login extends HttpServlet {
 			if (patient != null) {
 			 
 	            session.setAttribute("user", patient);
-	            request.getRequestDispatcher("/WEB-INF/accueilPatient.jsp").forward(request, response);
+	            request.getRequestDispatcher("/AccueilPatient").forward(request, response);
 	            
 	            System.out.println("User login successful");
 	            

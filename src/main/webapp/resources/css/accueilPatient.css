@@ -186,4 +186,159 @@ a{
 .right-section .main .header h2{
     color: var(--dark);
 }
+
+.right-section .main .header h2 .welcome-text{
+    color: var(--blue-btn);
+}
+
+.right-section .main .header .sub-header{
+    color: var(--grey);
+    font-size: 15px;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+/* ==========================================================
+                    main / prochain rendez-vous
+=========================================================== */
+
+.right-section .main .next-rdv-card{
+    background: var(--white);
+    border-radius: 15px;
+    gap: 20px;
+}
+
+.right-section .main .next-rdv-card .rdv-icon i{
+    font-size: 28px;
+    background: var(--light-blue);
+    color: var(--blue-btn);
+    padding: 14px;
+    border-radius: 12px;
+    margin-right: 16px;
+}
+
+.right-section .main .next-rdv-card .rdv-info h5{
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.right-section .main .next-rdv-card .rdv-info p{
+    color: var(--grey);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.right-section .main .next-rdv-card .rdv-info .rdv-date{
+    color: var(--blue-btn);
+    font-weight: 600;
+}
+
+.right-section .main .next-rdv-card .btn-rdv{
+    background: var(--blue-btn);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.right-section .main .next-rdv-card .btn-rdv:hover{
+    background: var(--dark-blue-btn);
+}
+
+/* ==========================================================
+                    main / statistiques
+=========================================================== */
+
+.right-section .main .stats{
+    gap: 20px;
+}
+
+.right-section .main .stats .stat-card{
+    background: var(--white);
+    border-radius: 15px;
+    gap: 14px;
+    flex: 1;
+}
+
+.right-section .main .stats .stat-card i{
+    font-size: 26px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.right-section .main .stats .stat-card i.stat-blue{
+    background: var(--light-blue);
+    color: var(--blue-btn);
+}
+
+.right-section .main .stats .stat-card i.stat-green{
+    background: var(--light-green);
+    color: var(--dark-green);
+}
+
+.right-section .main .stats .stat-card .stat-info h3{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+
+.right-section .main .stats .stat-card .stat-info p{
+    font-size: 13px;
+    color: var(--grey);
+    margin-bottom: 0;
+}
+
+/* ==========================================================
+                    main / accès rapides
+=========================================================== */
+
+.right-section .main .quick-access h4{
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.right-section .main .quick-access .quick-cards{
+    gap: 20px;
+}
+
+.right-section .main .quick-access .quick-card{
+    background: var(--white);
+    border-radius: 15px;
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.right-section .main .quick-access .quick-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(29, 146, 241, 0.15);
+}
+
+.right-section .main .quick-access .quick-card i{
+    font-size: 28px;
+    background: var(--light-blue);
+    color: var(--blue-btn);
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.right-section .main .quick-access .quick-card h5{
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.right-section .main .quick-access .quick-card p{
+    color: var(--grey);
+    font-size: 13px;
+    margin-bottom: 0;
+}
  

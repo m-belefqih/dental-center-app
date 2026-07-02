@@ -16,7 +16,7 @@
 			</a>
 		</div>
 		<div class="item">
-			<a href="#" class="d-flex align-items-center"> 
+			<a href="/dental-center-app/MesRendezVous" class="d-flex align-items-center">
 				<i class="ri-list-check-3"></i>
 				<h3>Mes rendez-vous</h3>
 			</a>

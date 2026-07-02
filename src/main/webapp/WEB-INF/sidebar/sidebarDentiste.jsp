@@ -10,7 +10,7 @@
 			<img class="logo-img mx-auto mb-5 w-100" src="<%=request.getContextPath()%>/resources/images/logo-white.png" alt="DENTAL CENTER">
 		</a>
 		<div class="item">
-			<a href="#" class="d-flex align-items-center"> 
+			<a href="/dental-center-app/AccueilDentiste" class="d-flex align-items-center">
 				<i class="ri-dashboard-line"></i>
 				<h3>Accueil</h3>
 			</a>

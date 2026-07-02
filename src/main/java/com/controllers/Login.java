@@ -111,7 +111,7 @@ public class Login extends HttpServlet {
 			if (dentiste != null) {
 				 
 	            session.setAttribute("user", dentiste);
-	            request.getRequestDispatcher("/WEB-INF/accueilDentiste.jsp").forward(request, response);
+	            request.getRequestDispatcher("/AccueilDentiste").forward(request, response);
 	            
 	            System.out.println("User login successful");
 	            

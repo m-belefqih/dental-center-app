@@ -107,7 +107,7 @@ a{
     margin-left: 217px;
 }
 
-.right-section .navbar{
+.right-section .myNavbar{
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -119,19 +119,19 @@ a{
     z-index: 20;
 }
 
-.right-section .navbar .iconsBtns-and-profile{
+.right-section .myNavbar .iconsBtns-and-profile{
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: space-between;
 }
 
-.right-section .navbar .iconsBtns-and-profile .icons-btns{
+.right-section .myNavbar .iconsBtns-and-profile .icons-btns{
     display: flex;
     gap: 8px;
 }
 
-.right-section .navbar .iconsBtns-and-profile .icons-btns i{
+.right-section .myNavbar .iconsBtns-and-profile .icons-btns i{
     font-size: 20px;
     background: var(--blue-btn);
     padding: 8px;
@@ -141,11 +141,11 @@ a{
     transition: all 0.3s ease;
 }
 
-.right-section .navbar .iconsBtns-and-profile .icons-btns i:hover{
+.right-section .myNavbar .iconsBtns-and-profile .icons-btns i:hover{
     background: var(--dark-blue-btn);
 }
 
-.right-section .navbar .iconsBtns-and-profile .profile{
+.right-section .myNavbar .iconsBtns-and-profile .profile{
     padding: 10px;
     display: flex;
     gap: 20px;
@@ -154,32 +154,32 @@ a{
     border-radius: 15px;
 }
 
-.right-section .navbar .iconsBtns-and-profile .profile .info{
+.right-section .myNavbar .iconsBtns-and-profile .profile .info{
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-.right-section .navbar .iconsBtns-and-profile .profile .info img{
+.right-section .myNavbar .iconsBtns-and-profile .profile .info img{
     width: 48px;
     height: 48px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.right-section .navbar .iconsBtns-and-profile .profile .info .account h5{
+.right-section .myNavbar .iconsBtns-and-profile .profile .info .account h5{
     font-size: 15px;
     margin-bottom: 4px;
     cursor: pointer;
     color: var(--black);
 }
 
-.right-section .navbar .iconsBtns-and-profile .profile .info .account p{
+.right-section .myNavbar .iconsBtns-and-profile .profile .info .account p{
     font-size: 13px;
     color: var(--grey);
 }
 
-.right-section .navbar .iconsBtns-and-profile .profile > i{
+.right-section .myNavbar .iconsBtns-and-profile .profile > i{
     font-size: 24px;
     color: var(--dark-blue);
     cursor: pointer;

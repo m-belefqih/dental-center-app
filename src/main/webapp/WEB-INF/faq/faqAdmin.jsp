@@ -28,25 +28,8 @@
     <jsp:include page="../sidebar/sidebarAdmin.jsp"></jsp:include>
 
     <div class="right-section flex-grow-1 d-flex flex-column">
-        <div class="myNavbar d-flex align-items-center justify-content-end p-4">
-            
-            <div class="iconsBtns-and-profile d-flex align-items-center justify-content-between">
-                <div class="icons-btns d-flex">
-                    <i class="ri-notification-3-line"></i>
-                    <i class="ri-message-3-line"></i>
-                </div>
-                <div class="profile d-flex align-items-center justify-content-between">
-                    <div class="info d-flex align-items-center">
-                        <img src="<%=request.getContextPath()%>/resources/images/profile.png">
-                        <div class="account">
-                            <a href="Profile"><h5>${user.prenom} ${user.nom}</h5></a>
-                            <p>Administrateur</p>
-                        </div>
-                    </div>
-                    <i class="ri-arrow-down-s-line"></i>
-                </div>
-            </div>
-        </div>   
+        <!-- navbar -->
+        <jsp:include page="../navbar/navbar.jsp"></jsp:include>
 
         <div class="main flex-grow-1 d-flex flex-column p-4">
         

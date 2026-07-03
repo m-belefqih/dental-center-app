@@ -25,24 +25,8 @@
 	<jsp:include page="../sidebar/sidebarAdmin.jsp"></jsp:include>
 
     <div class="right-section">
-        <div class="navbar">
-            <div class="iconsBtns-and-profile">
-                <div class="icons-btns">
-                    <i class="ri-notification-3-line"></i>
-                    <i class="ri-message-3-line"></i>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <img src="<%=request.getContextPath()%>/resources/images/profile.png" alt="PHOTO PROFILE">
-                        <div class="account">
-                            <a href="Profile"><h5>${user.prenom} ${user.nom}</h5></a>
-                            <p>Administrateur</p>
-                        </div>
-                    </div>
-                    <i class="ri-arrow-down-s-line"></i>
-                </div>
-            </div>
-        </div>
+        <!-- navbar -->
+        <jsp:include page="../navbar/navbar.jsp"></jsp:include>
 
         <div class="main">
 

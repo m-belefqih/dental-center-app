@@ -31,33 +31,8 @@
 	<jsp:include page="../sidebar/sidebarPatient.jsp"></jsp:include>
 
     <div class="right-section flex-grow-1 d-flex flex-column">
-        <div class="myNavbar d-flex align-items-center justify-content-end p-4">
-            
-            <div class="iconsBtns-and-profile d-flex align-items-center justify-content-between">
-                <div class="icons-btns d-flex">
-                    <i class="ri-notification-3-line"></i>
-                    <i class="ri-message-3-line"></i>
-                </div>
-                <div class="profile d-flex align-items-center justify-content-between">
-                    <div class="info d-flex align-items-center">
-                    	<c:choose>
-                            <c:when test="${user.sexe == 'Homme'}">
-                           		<img src="<%=request.getContextPath()%>/resources/images/men.png">
-                            </c:when>
-                            <c:when test="${user.sexe == 'Femme'}">
-                            	<img src="<%=request.getContextPath()%>/resources/images/women.png">
-                            </c:when>
-                        </c:choose>
-                         
-                        <div class="account">
-                            <a href="Profile"><h5>${user.prenom} ${user.nom}</h5></a>
-                            <p>Patient</p>
-                        </div>
-                    </div>
-                    <i class="ri-arrow-down-s-line"></i>
-                </div>
-            </div>
-        </div>   
+        <!-- navbar -->
+        <jsp:include page="../navbar/navbar.jsp"></jsp:include>
 
         <div class="main flex-grow-1 d-flex flex-column p-4">
             <div class="header mb-4">

@@ -68,7 +68,7 @@ public class AccueilPatient extends HttpServlet {
 		request.setAttribute("prochainRDV", prochainRDV);
 		request.setAttribute("today", today);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/accueilPatient.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/home/accueilPatient.jsp");
 		dispatcher.forward(request, response);
 	}
 

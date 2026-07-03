@@ -9,15 +9,16 @@ public class Dentiste {
 	private String cin;
 	private String prenom;
 	private String nom;
+	private String sexe;
 	private String specialty;
-	
+
 	// Default Constructor
 	public Dentiste() {
 		super();
 	}
-	
+
 	// Constructor receives all fields
-	public Dentiste(int id, String email, String password, String cin, String prenom, String nom, String specialty) {
+	public Dentiste(int id, String email, String password, String cin, String prenom, String nom, String sexe, String specialty) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -25,18 +26,20 @@ public class Dentiste {
 		this.cin = cin;
 		this.prenom = prenom;
 		this.nom = nom;
+		this.sexe = sexe;
 		this.specialty = specialty;
 	}
-	
-	
-	// Constructor receives 6 fields (without an id)
-	public Dentiste(String email, String password, String cin, String prenom, String nom, String specialty) {
+
+
+	// Constructor receives 7 fields (without an id)
+	public Dentiste(String email, String password, String cin, String prenom, String nom, String sexe, String specialty) {
 		super();
 		this.email = email;
 		this.password = password;
 		this.cin = cin;
 		this.prenom = prenom;
 		this.nom = nom;
+		this.sexe = sexe;
 		this.specialty = specialty;
 	}
 	
@@ -89,6 +92,14 @@ public class Dentiste {
 		this.nom = nom;
 	}
 
+	public String getSexe() {
+		return sexe;
+	}
+
+	public void setSexe(String sexe) {
+		this.sexe = sexe;
+	}
+
 	public String getSpecialty() {
 		return specialty;
 	}
@@ -100,7 +111,7 @@ public class Dentiste {
 	@Override
 	public String toString() {
 		return "Dentiste [id=" + id + ", email=" + email + ", password=" + password + ", cin=" + cin + ", prenom="
-				+ prenom + ", nom=" + nom + ", specialty=" + specialty + "]";
+				+ prenom + ", nom=" + nom + ", sexe=" + sexe + ", specialty=" + specialty + "]";
 	}
 	
 	public static void main(String[] args) {
@@ -113,6 +124,7 @@ public class Dentiste {
 		dentiste.setCin("LBF78QA");
 		dentiste.setPrenom("Mohammed");
 		dentiste.setNom("Belefqih");
+		dentiste.setSexe("Homme");
 		dentiste.setSpecialty("Orthodontie");
 	 
 		System.out.println(dentiste); // dentiste.toString()

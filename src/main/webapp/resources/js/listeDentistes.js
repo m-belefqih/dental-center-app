@@ -52,12 +52,12 @@ app.controller('dentistCtrl', function($scope) {
 				}
 			);
 
-		// Parse the detist details JSON string into an object and store it in $scope.dentist
-		$scope.dentist = JSON.parse(dentistDetails);
-		console.log('Dentist Details ==> ' + $scope.dentist);
+		// Parse the detist details JSON string into an object and store it in $scope.dentiste
+		$scope.dentiste = JSON.parse(dentistDetails);
+		console.log('Dentist Details ==> ' + $scope.dentiste);
 
 		// return the dentist object
-		return $scope.dentist;
+		return $scope.dentiste;
 	}
 }
 );

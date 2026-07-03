@@ -96,6 +96,7 @@ public class Profile extends HttpServlet {
 			dentiste.setNom(request.getParameter("nom"));
 			dentiste.setEmail(request.getParameter("email"));
 			dentiste.setCin(request.getParameter("cin"));
+			dentiste.setSexe(request.getParameter("sexe"));
 			dentiste.setSpecialty(request.getParameter("specialty"));
 
 			if (password != null && !password.trim().isEmpty()) {

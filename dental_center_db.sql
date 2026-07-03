@@ -98,6 +98,7 @@ CREATE TABLE IF NOT EXISTS `dentiste` (
     `cin` varchar(100) DEFAULT NULL,
     `prenom` varchar(100) DEFAULT NULL,
     `nom` varchar(100) DEFAULT NULL,
+    `sexe` varchar(100) DEFAULT NULL,
     `specialty` varchar(100) DEFAULT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -106,12 +107,12 @@ CREATE TABLE IF NOT EXISTS `dentiste` (
 -- Déchargement des données de la table `dentiste`
 --
 
-INSERT INTO `dentiste` (`id`, `email`, `password`, `cin`, `prenom`, `nom`, `specialty`) VALUES
-(1, 'hamza@gmail.com', 'hamza1234', 'LQJ2X4', 'Hamza', 'Kentri', 'Orthodontie'),
-(2, 'asmae@gmail.com', 'asmae1234', 'BH83SD', 'Asmae', 'Zyani', 'dentisterie-esthétique'),
-(3, 'aymane@gmail.com', 'aymane1234', 'LP12OF', 'Aymane', 'Mahmoudi', 'Parodontologie'),
-(4, 'salma@gmail.com', 'salma1234', 'SR45KL', 'Salma', 'Benali', 'Orthodontie'),
-(5, 'yassine@gmail.com', 'yassine1234', 'YS78MN', 'Yassine', 'El Idrissi', 'Parodontologie');
+INSERT INTO `dentiste` (`id`, `email`, `password`, `cin`, `prenom`, `nom`, `sexe`, `specialty`) VALUES
+(1, 'hamza@gmail.com', 'hamza1234', 'LQJ2X4', 'Hamza', 'Kentri', 'Homme', 'Orthodontie'),
+(2, 'asmae@gmail.com', 'asmae1234', 'BH83SD', 'Asmae', 'Zyani', 'Femme', 'dentisterie-esthétique'),
+(3, 'aymane@gmail.com', 'aymane1234', 'LP12OF', 'Aymane', 'Mahmoudi', 'Homme', 'Parodontologie'),
+(4, 'salma@gmail.com', 'salma1234', 'SR45KL', 'Salma', 'Benali', 'Femme', 'Orthodontie'),
+(5, 'yassine@gmail.com', 'yassine1234', 'YS78MN', 'Yassine', 'El Idrissi', 'Homme', 'Parodontologie');
 
 -- ---------------------------------------------------------------------------------
 

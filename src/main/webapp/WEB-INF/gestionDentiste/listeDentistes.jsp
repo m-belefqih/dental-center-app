@@ -49,10 +49,31 @@
                 </div>
                 <div class="profile d-flex align-items-center justify-content-between">
                     <div class="info d-flex align-items-center">
-                        <img src="<%=request.getContextPath()%>/resources/images/profile.png">
+                    	<c:choose>
+                            <c:when test="${accountType == 'admin'}">
+                            	<img src="<%=request.getContextPath()%>/resources/images/profile.png">
+                            </c:when>
+                            <c:when test="${accountType == 'dentiste'}">
+                            	<c:choose>
+                            		<c:when test="${user.sexe == 'Femme'}">
+                            			<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-women.jpg">
+                            		</c:when>
+                            		<c:otherwise>
+                            			<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-men.png">
+                            		</c:otherwise>
+                            	</c:choose>
+                       		</c:when>
+                        </c:choose>
                         <div class="account">
                             <a href="Profile"><h5>${user.prenom} ${user.nom}</h5></a>
-                            <p>Administrateur</p>
+                            <c:choose>
+                            	<c:when test="${accountType == 'admin'}">
+                            		<p>Administrateur</p>
+                            	</c:when>
+                            	<c:when test="${accountType == 'dentiste'}">
+                            		<p>Dentiste</p>
+                            	</c:when>
+                            </c:choose>
                         </div>
                     </div>
                     <i class="ri-arrow-down-s-line"></i>
@@ -97,6 +118,7 @@
                                 </th>
                                 <th>Nom</th>
                                 <th>Prénom</th>
+                                <th>Sexe</th>
                                 <th>CIN</th>
                                 <th>Email</th>
                                 <th>Mot de passe</th>
@@ -112,6 +134,7 @@
                                     </td>
                                     <td>${dentiste.nom}</td>
 		                            <td>${dentiste.prenom}</td>
+		                            <td>${dentiste.sexe}</td>
 		                            <td>${dentiste.cin}</td>
                             		<td>${dentiste.email}</td>
                             		<td>${dentiste.password}</td>

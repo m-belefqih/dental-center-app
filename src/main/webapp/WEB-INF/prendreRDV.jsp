@@ -96,7 +96,7 @@
 	                            <td>
 	                                <div class="dentist-info d-flex">
 	                                	<c:choose>
-				                            <c:when test="${plannification.dentiste.prenom == 'Asmae'}">
+				                            <c:when test="${plannification.dentiste.sexe == 'Femme'}">
 				                            	<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-women.jpg">
 				                            </c:when>
 				                            <c:otherwise>

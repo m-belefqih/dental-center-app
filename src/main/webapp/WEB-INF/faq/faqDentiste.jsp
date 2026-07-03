@@ -38,7 +38,7 @@
                 <div class="profile d-flex align-items-center justify-content-between">
                     <div class="info d-flex align-items-center">
                         <c:choose>
-                            <c:when test="${user.prenom == 'Asmae'}">
+                            <c:when test="${user.sexe == 'Femme'}">
                            		<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-women.jpg">
                             </c:when>
                             <c:otherwise>

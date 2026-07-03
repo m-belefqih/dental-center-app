@@ -62,7 +62,14 @@
                             	<img src="<%=request.getContextPath()%>/resources/images/profile.png">
                             </c:when>
                             <c:when test="${accountType == 'dentiste'}">
-                            	<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-men.png">
+                            	<c:choose>
+                            		<c:when test="${user.sexe == 'Femme'}">
+                            			<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-women.jpg">
+                            		</c:when>
+                            		<c:otherwise>
+                            			<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-men.png">
+                            		</c:otherwise>
+                            	</c:choose>
                         	</c:when>
                         </c:choose>
                     	 

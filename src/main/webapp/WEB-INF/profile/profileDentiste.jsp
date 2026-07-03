@@ -37,7 +37,7 @@
                 <div class="profile d-flex align-items-center justify-content-between">
                     <div class="info d-flex align-items-center">
                         <c:choose>
-                            <c:when test="${user.prenom == 'Asmae'}">
+                            <c:when test="${user.sexe == 'Femme'}">
                            		<img src="<%=request.getContextPath()%>/resources/images/profile-dentist-women.jpg">
                             </c:when>
                             <c:otherwise>
@@ -80,7 +80,7 @@
 
                 <div class="profile-banner d-flex align-items-center p-4">
                     <c:choose>
-                        <c:when test="${user.prenom == 'Asmae'}">
+                        <c:when test="${user.sexe == 'Femme'}">
                             <img src="<%=request.getContextPath()%>/resources/images/profile-dentist-women.jpg">
                         </c:when>
                         <c:otherwise>
@@ -114,9 +114,17 @@
                         </div>
 
                         <div class="col-md-6">
+                            <label for="sexe">Sexe</label>
+                            <select class="form-select" id="sexe" name="sexe" required>
+                                <option value="Homme" ${user.sexe == 'Homme' ? 'selected' : ''}>Homme</option>
+                                <option value="Femme" ${user.sexe == 'Femme' ? 'selected' : ''}>Femme</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
                             <label for="specialty">Spécialité</label>
                             <input type="text" class="form-control" id="specialty" name="specialty" value="${user.specialty}" required>
                         </div>
+
                         <div class="col-md-6">
                             <label for="password">Nouveau mot de passe</label>
                             <input type="password" class="form-control" id="password" name="password" placeholder="••••••••">

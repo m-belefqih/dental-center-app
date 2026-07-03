@@ -140,9 +140,10 @@ public class ListeDentistes extends HttpServlet {
 		String cin = request.getParameter("cin");
 		String prenom = request.getParameter("prenom");
 		String nom = request.getParameter("nom");
+		String sexe = request.getParameter("sexe");
 		String specialty = request.getParameter("specialty");
 
-		Dentiste dentiste = new Dentiste(id, email, password, cin, prenom, nom, specialty);
+		Dentiste dentiste = new Dentiste(id, email, password, cin, prenom, nom, sexe, specialty);
 		System.out.println("updateDentist, Dentist details ==> " + dentiste); // dentiste.toString()
 
 		boolean result = dentisteDAO.update(dentiste);
@@ -169,9 +170,10 @@ public class ListeDentistes extends HttpServlet {
 		String cin = request.getParameter("cin");
 		String prenom = request.getParameter("prenom");
 		String nom = request.getParameter("nom");
+		String sexe = request.getParameter("sexe");
 		String specialty = request.getParameter("specialty");
 
-		Dentiste dentiste = new Dentiste(email, password, cin, prenom, nom, specialty);
+		Dentiste dentiste = new Dentiste(email, password, cin, prenom, nom, sexe, specialty);
 		System.out.println("createNewDentist, Dentist details ==> " + dentiste); // dentiste.toString()
 
 		boolean result = dentisteDAO.create(dentiste);

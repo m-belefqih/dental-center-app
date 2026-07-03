@@ -27,13 +27,21 @@
 									<input type="text" name="prenom" class="form-control custom-border-color" id="InputPrenom" required>
 								</div>
 								<div class="mb-3">
-									<label for="InputNom" class="form-label">Nom *</label> 
+									<label for="InputNom" class="form-label">Nom *</label>
 									<input type="text" name="nom" class="form-control custom-border-color" id="InputNom" required>
-								</div>		 
+								</div>
 								<div class="mb-3">
-									<label for="InputCIN" class="form-label">CIN *</label> 
+									<label for="InputSexe" class="form-label">Sexe *</label>
+									<select class="form-select custom-border-color" name="sexe" id="InputSexe" required>
+										<option value="">Sélectionnez votre sexe</option>
+									  	<option value="Homme">Homme</option>
+									  	<option value="Femme">Femme</option>
+									</select>
+								</div>
+								<div class="mb-3">
+									<label for="InputCIN" class="form-label">CIN *</label>
 									<input type="text" name="cin" class="form-control custom-border-color" id="InputCIN" required>
-								</div>			 
+								</div>
 							</div>
 									
 							<div class="col-md-6">	 

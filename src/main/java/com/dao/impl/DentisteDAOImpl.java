@@ -34,10 +34,11 @@ public class DentisteDAOImpl implements DentisteDAO{
 				String cin = rs.getString("cin");
 				String prenom = rs.getString("prenom");
 				String nom = rs.getString("nom");
+				String sexe = rs.getString("sexe");
 				String specialty = rs.getString("specialty");
-				 
-				
-				dentiste = new Dentiste(id, email, password, cin, prenom, nom, specialty);
+
+
+				dentiste = new Dentiste(id, email, password, cin, prenom, nom, sexe, specialty);
 				
 			}
 			
@@ -53,15 +54,16 @@ public class DentisteDAOImpl implements DentisteDAO{
 	public boolean create(Dentiste dentiste) {
 		
 		try {
-			String query = "INSERT INTO dentiste (email, password, cin, prenom, nom, specialty) VALUES (?, ?, ?, ?, ?, ?)";
+			String query = "INSERT INTO dentiste (email, password, cin, prenom, nom, sexe, specialty) VALUES (?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement preSt = connexion.prepareStatement(query);
-			
+
 			preSt.setString(1, dentiste.getEmail());
 			preSt.setString(2, dentiste.getPassword());
 			preSt.setString(3, dentiste.getCin());
 			preSt.setString(4, dentiste.getPrenom());
 			preSt.setString(5, dentiste.getNom());
-			preSt.setString(6, dentiste.getSpecialty());
+			preSt.setString(6, dentiste.getSexe());
+			preSt.setString(7, dentiste.getSpecialty());
 
 			int result = preSt.executeUpdate();
 			return result == 1 ? true : false;
@@ -76,16 +78,17 @@ public class DentisteDAOImpl implements DentisteDAO{
 	public boolean update(Dentiste dentiste) {
 		
 		try {
-			String query = "UPDATE dentiste SET email = ?, password = ?, cin = ?, prenom = ?, nom = ?, specialty = ? WHERE id = ?";
+			String query = "UPDATE dentiste SET email = ?, password = ?, cin = ?, prenom = ?, nom = ?, sexe = ?, specialty = ? WHERE id = ?";
 			PreparedStatement preSt = connexion.prepareStatement(query);
-				
+
 			preSt.setString(1, dentiste.getEmail());
 			preSt.setString(2, dentiste.getPassword());
 			preSt.setString(3, dentiste.getCin());
 			preSt.setString(4, dentiste.getPrenom());
 			preSt.setString(5, dentiste.getNom());
-			preSt.setString(6, dentiste.getSpecialty());
-			preSt.setInt(7, dentiste.getId());
+			preSt.setString(6, dentiste.getSexe());
+			preSt.setString(7, dentiste.getSpecialty());
+			preSt.setInt(8, dentiste.getId());
 
 			int result = preSt.executeUpdate();
 			return result == 1 ? true : false; 
@@ -133,6 +136,7 @@ public class DentisteDAOImpl implements DentisteDAO{
 				dentiste.setCin(rs.getString("cin"));
 				dentiste.setPrenom(rs.getString("prenom"));
 				dentiste.setNom(rs.getString("nom"));
+				dentiste.setSexe(rs.getString("sexe"));
 				dentiste.setSpecialty(rs.getString("specialty"));
 			}
 			
@@ -160,10 +164,11 @@ public class DentisteDAOImpl implements DentisteDAO{
 				String cin = rs.getString("cin");
 				String prenom = rs.getString("prenom");
 				String nom = rs.getString("nom");
+				String sexe = rs.getString("sexe");
 				String specialty = rs.getString("specialty");
-	 
-				
-				Dentiste dentiste = new Dentiste(id, email, password, cin, prenom, nom, specialty);
+
+
+				Dentiste dentiste = new Dentiste(id, email, password, cin, prenom, nom, sexe, specialty);
 				
 				dentistes.add(dentiste);
 			}
@@ -185,6 +190,7 @@ public class DentisteDAOImpl implements DentisteDAO{
 		dentiste.setCin("LBF78QA");
 		dentiste.setPrenom("Ismail");
 		dentiste.setNom("Zriwli");
+		dentiste.setSexe("Homme");
 		dentiste.setSpecialty("Parodontologie");
  
 		DentisteDAO dentisteDAO = new DentisteDAOImpl();
@@ -199,6 +205,7 @@ public class DentisteDAOImpl implements DentisteDAO{
 		dentiste.setCin("LB9090");
 		dentiste.setPassword("2024mohammed");
 		dentiste.setEmail("med@gmail.com");
+		dentiste.setSexe("Homme");
 		dentiste.setSpecialty("Orthodontie");
 		
 		DentisteDAO dentisteDAO = new DentisteDAOImpl();

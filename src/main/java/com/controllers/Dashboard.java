@@ -43,7 +43,7 @@ public class Dashboard extends HttpServlet {
 		System.out.println(nbrFemme);
 		request.setAttribute("nbrHomme", nbrHomme);
 		request.setAttribute("nbrFemme", nbrFemme);
-		request.getRequestDispatcher("/WEB-INF/dashboard.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/home/dashboard.jsp").forward(request, response);
 	}
  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

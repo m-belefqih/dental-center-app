@@ -19,4 +19,18 @@
   		<servlet-name>default</servlet-name>
   		<url-pattern>/resources/*</url-pattern>
   </servlet-mapping>
+
+  <!-- Pages d'erreur personnalisées -->
+  <error-page>
+  		<error-code>403</error-code>
+  		<location>/WEB-INF/error/error.jsp</location>
+  </error-page>
+  <error-page>
+  		<error-code>404</error-code>
+  		<location>/WEB-INF/error/error.jsp</location>
+  </error-page>
+  <error-page>
+  		<exception-type>java.lang.Throwable</exception-type>
+  		<location>/WEB-INF/error/error.jsp</location>
+  </error-page>
 </web-app>

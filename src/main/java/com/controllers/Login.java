@@ -91,7 +91,7 @@ public class Login extends HttpServlet {
 	    		System.out.println(nbrFemme);
 	    		request.setAttribute("nbrHomme", nbrHomme);
 	    		request.setAttribute("nbrFemme", nbrFemme);
-	    		request.getRequestDispatcher("/WEB-INF/dashboard.jsp").forward(request, response);
+	    		request.getRequestDispatcher("/WEB-INF/home/dashboard.jsp").forward(request, response);
 	            
 	            System.out.println("User login successful");
 	            

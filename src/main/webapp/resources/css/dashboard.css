@@ -110,21 +110,13 @@ a{
 .right-section .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 90px;
     padding: 25px;
     background: var(--white);
     position: sticky;
     top: 0;
     z-index: 20;
-}
-
-.right-section .navbar .title-welcome{
-    color: var(--dark-blue);
-}
-
-.right-section .navbar .title-welcome h2 span{
-    font-weight: normal;
 }
 
 .right-section .navbar .iconsBtns-and-profile{
@@ -206,10 +198,23 @@ a{
 }
 
 .right-section .main .header{
-    font-size: 32px;
-    font-weight: 600;
     margin-bottom: 10px;
+}
+
+.right-section .main .header h2{
+    font-weight: 600;
     color: var(--dark);
+}
+
+.right-section .main .header h2 .welcome-text{
+    color: var(--blue-btn);
+}
+
+.right-section .main .header .sub-header{
+    color: var(--grey);
+    font-size: 15px;
+    margin-top: 6px;
+    margin-bottom: 0;
 }
 
 .right-section .main .insights{

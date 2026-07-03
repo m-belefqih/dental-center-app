@@ -26,9 +26,6 @@
 
     <div class="right-section">
         <div class="navbar">
-            <div class="title-welcome">
-                <h2><span>Bonjour</span> Admin</h2>
-            </div>
             <div class="iconsBtns-and-profile">
                 <div class="icons-btns">
                     <i class="ri-notification-3-line"></i>
@@ -49,9 +46,10 @@
 
         <div class="main">
 
-            <h3 class="header">
-                Tableau de bord
-            </h3>
+            <div class="header">
+                <h2><span class="welcome-text">Bonjour,</span> ${user.prenom} ${user.nom}</h2>
+                <p class="sub-header">Bienvenue dans votre espace administrateur.</p>
+            </div>
 
             <ul class="insights">  
                 <li>

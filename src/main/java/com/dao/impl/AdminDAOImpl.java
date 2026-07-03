@@ -52,9 +52,26 @@ public class AdminDAOImpl implements AdminDAO {
 	}
 
 	@Override
-	public boolean update(Admin o) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean update(Admin admin) {
+
+		try {
+			String query = "UPDATE admin SET email = ?, password = ?, cin = ?, prenom = ?, nom = ? WHERE id = ?";
+			PreparedStatement preSt = connexion.prepareStatement(query);
+
+			preSt.setString(1, admin.getEmail());
+			preSt.setString(2, admin.getPassword());
+			preSt.setString(3, admin.getCin());
+			preSt.setString(4, admin.getPrenom());
+			preSt.setString(5, admin.getNom());
+			preSt.setInt(6, admin.getId());
+
+			int result = preSt.executeUpdate();
+			return result == 1 ? true : false;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Override

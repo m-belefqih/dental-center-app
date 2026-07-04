@@ -32,6 +32,12 @@ body{
     background-color: var(--light);
 }
 
+/* SweetAlert2 ajoute la classe swal2-height-auto au body (height: auto !important),
+   ce qui fait s'effondrer le fond de la page : on force la hauteur à rester 100vh */
+body.swal2-height-auto{
+    height: 100vh !important;
+}
+
 /* ==========================================================
                         MAIN
 =========================================================== */

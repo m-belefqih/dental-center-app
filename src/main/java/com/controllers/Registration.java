@@ -40,33 +40,45 @@ public class Registration extends HttpServlet {
 		String telephone = request.getParameter("telephone");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		
+		String confirmPassword = request.getParameter("confirmPassword");
+
 		PatientDAO patientDAO = new PatientDAOImpl();
-		boolean isExist = patientDAO.isExist(email);
-		
-		if(isExist) {
-			
-			String messageErreur = "Cette adresse email est déjà utilisée !";
+
+		String messageErreur = null;
+
+		if (password == null || password.length() < 8) {
+			messageErreur = "Le mot de passe doit contenir au moins 8 caractères !";
+		} else if (!password.equals(confirmPassword)) {
+			messageErreur = "Le mot de passe et sa confirmation ne correspondent pas !";
+		} else if (patientDAO.isExist(email)) {
+			messageErreur = "Cette adresse email est déjà utilisée !";
+		}
+
+		if (messageErreur != null) {
 			request.setAttribute("messageErreur", messageErreur);
 			request.getRequestDispatcher("/WEB-INF/authentification/registration.jsp").forward(request, response);
-		
-		}else {
-			
-			String codeOTP = patientDAO.getRandom();	
-			
-			boolean isSendEmail = patientDAO.sendEmail(email, codeOTP);
-			
-			if (isSendEmail) {
-				
-				HttpSession session = request.getSession();
-				session.setAttribute("codeOTP", codeOTP);
-				
-				Patient patient = new Patient(email, password, cin, prenom, nom, birthDate, sexe, telephone, adresse);
-				session.setAttribute("patientInfo", patient);
-				
-				request.getRequestDispatcher("/WEB-INF/authentification/verificationOTP.jsp").forward(request, response);
-			}
-			
+			return;
+		}
+
+		String codeOTP = patientDAO.getRandom();
+
+		boolean isSendEmail = patientDAO.sendEmail(email, codeOTP);
+
+		if (isSendEmail) {
+
+			HttpSession session = request.getSession();
+			session.setAttribute("codeOTP", codeOTP);
+
+			Patient patient = new Patient(email, password, cin, prenom, nom, birthDate, sexe, telephone, adresse);
+			session.setAttribute("patientInfo", patient);
+
+			request.getRequestDispatcher("/WEB-INF/authentification/verificationOTP.jsp").forward(request, response);
+
+		} else {
+
+			messageErreur = "Impossible d'envoyer le code de vérification à cette adresse email. Veuillez réessayer !";
+			request.setAttribute("messageErreur", messageErreur);
+			request.getRequestDispatcher("/WEB-INF/authentification/registration.jsp").forward(request, response);
 		}
 	}
 

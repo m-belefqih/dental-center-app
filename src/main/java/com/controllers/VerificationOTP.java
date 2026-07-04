@@ -26,32 +26,49 @@ public class VerificationOTP extends HttpServlet {
 
  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		String code = request.getParameter("code");
-		
+
 		HttpSession session = request.getSession();
 		String codeOTP = (String) session.getAttribute("codeOTP");
-		
+		Patient patient = (Patient) session.getAttribute("patientInfo");
+
+		// Session expirée ou accès direct sans passer par l'inscription
+		if (codeOTP == null || patient == null) {
+			response.sendRedirect("Registration");
+			return;
+		}
+
 		if (codeOTP.equals(code)) {
-			
-			Patient patient = (Patient) session.getAttribute("patientInfo");
-			
+
 			PatientDAO patientDAO = new PatientDAOImpl();
-			boolean isRegistered = patientDAO.register(patient); 
-			
+			boolean isRegistered = patientDAO.register(patient);
+
 			if(isRegistered) {
 				System.out.println("Registration successful!");
-				
-				session.setAttribute("user", patient);
-		 
-				request.getRequestDispatcher("/WEB-INF/profilePatient.jsp").forward(request, response);
+
+				// Recharger le patient depuis la base pour récupérer son id généré
+				Patient registeredPatient = patientDAO.checkLogin(patient.getEmail(), patient.getPassword());
+
+				session.removeAttribute("codeOTP");
+				session.removeAttribute("patientInfo");
+				session.setAttribute("user", registeredPatient != null ? registeredPatient : patient);
+
+				request.setAttribute("registrationSuccess", true);
+				request.getRequestDispatcher("/WEB-INF/authentification/verificationOTP.jsp").forward(request, response);
+
+			}else {
+				String messageErreur = "Une erreur est survenue lors de la création de votre compte. Veuillez réessayer !";
+				request.setAttribute("messageErreur", messageErreur);
+
+				request.getRequestDispatcher("/WEB-INF/authentification/verificationOTP.jsp").forward(request, response);
 			}
-			
+
 		}else {
 			String messageErreur = "Le code de vérification que vous avez saisi est incorrect !";
 			request.setAttribute("messageErreur", messageErreur);
-			
-			request.getRequestDispatcher("/WEB-INF/verificationOTP.jsp").forward(request, response);
+
+			request.getRequestDispatcher("/WEB-INF/authentification/verificationOTP.jsp").forward(request, response);
 		}
 	}
 

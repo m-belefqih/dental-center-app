@@ -24,3 +24,6 @@ nbdist/
 # === Tomcat / Build ===
 build/
 .smarttomcat/
+
+# === Secrets / Configuration locale ===
+src/main/resources/application.properties

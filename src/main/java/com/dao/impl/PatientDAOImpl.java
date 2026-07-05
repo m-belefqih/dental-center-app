@@ -17,6 +17,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import com.config.AppConfig;
 import com.dao.PatientDAO;
 import com.dao.PlannificationDAO;
 import com.db.DBConnexion;
@@ -99,8 +100,9 @@ public class PatientDAOImpl implements PatientDAO {
 	// Method to send an email with a verification code
 	@Override
 	public boolean sendEmail(String EMAIL_TO, String CODE) {
-		String FROM_EMAIL = "xxxxxxx@gmail.com";
-		String APP_PASSWORD = "xxxx xxxx xxxx xxxx";
+		// Identifiants Gmail lus depuis application.properties (exclu de git)
+		String FROM_EMAIL = AppConfig.get("mail.from");
+		String APP_PASSWORD = AppConfig.get("mail.password");
 		
 		try {
 			

@@ -1,0 +1,14 @@
+# Modele de configuration.
+# Copiez ce fichier vers application.properties (meme dossier) et remplissez vos valeurs.
+# application.properties est exclu de git : vos identifiants restent locaux.
+
+# --- Base de donnees MySQL ---
+db.url=jdbc:mysql://localhost:3306/dental_center_db?useSSL=false
+db.login=VOTRE_UTILISATEUR_MYSQL
+db.password=VOTRE_MOT_DE_PASSE_MYSQL
+
+# --- Compte Gmail pour l'envoi des codes OTP ---
+# mail.password : mot de passe d'application Gmail (16 caracteres)
+# https://support.google.com/accounts/answer/185833
+mail.from=votre.email@gmail.com
+mail.password=xxxx xxxx xxxx xxxx

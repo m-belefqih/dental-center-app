@@ -60,6 +60,9 @@ public class Planning extends HttpServlet {
 
 		request.setAttribute("planningsParJour", planningsParJour);
 
+		// Date minimale sélectionnable dans le champ date (aujourd'hui)
+		request.setAttribute("today", LocalDate.now().toString());
+
 		request.getRequestDispatcher("/WEB-INF/planification.jsp").forward(request, response);
 	}
 
@@ -67,7 +70,21 @@ public class Planning extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String datePlanning = request.getParameter("datePlanning");
-		
+
+		// Refuser toute date antérieure à aujourd'hui : on ne peut planifier
+		// que le jour même ou les jours à venir.
+		LocalDate dateSelectionnee = LocalDate.parse(datePlanning);
+
+		if (dateSelectionnee.isBefore(LocalDate.now())) {
+
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.FRENCH);
+
+			request.setAttribute("messageDatePassee", "Yes");
+			request.setAttribute("formattedDate", dateSelectionnee.format(formatter));
+			doGet(request, response);
+			return;
+		}
+
 		PlannificationDAO plannificationDAO = new PlannificationDAOImpl();
 		boolean result = plannificationDAO.isPlanned(datePlanning);
 		

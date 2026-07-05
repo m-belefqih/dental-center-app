@@ -34,6 +34,14 @@
 
         <div class="main flex-grow-1 d-flex flex-column p-4">
         
+        	<c:if test="${messageDatePassee == 'Yes'}">
+				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+					<i class="fas fa-exclamation-circle me-2"></i>
+					Le <strong>${formattedDate}</strong> est une date passée. Vous ne pouvez planifier que la date d'aujourd'hui ou les jours à venir.
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			</c:if>
+
         	<c:if test="${messageWarning == 'Yes'}">
 				<div class="alert alert-warning alert-dismissible fade show" role="alert">
 					<i class="fas fa-exclamation-circle me-2"></i> 
@@ -64,7 +72,7 @@
 
             <form action="Planning" method="POST" class="content-main d-flex flex-column mt-4 p-3 ">
                 <div class="for-search d-flex justify-content-end align-items-center gap-2">
-                    <input class="form-control" name="datePlanning" type="date" style="width: 300px;" required>
+                    <input class="form-control" name="datePlanning" type="date" min="${today}" style="width: 300px;" required>
                     <button class="btn btn-success" type="submit"><b>Enregistrer</b></button>
                 </div>
 

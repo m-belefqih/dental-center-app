@@ -12,6 +12,8 @@ public interface PlannificationDAO {
 
 	public List<Plannification> getAllOrderedByDayDesc();
 
+	public List<Plannification> getAllUpcoming();
+
 	public Plannification getById(int id);
 	
 	public boolean isPlanned(String jour);

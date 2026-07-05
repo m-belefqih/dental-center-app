@@ -73,7 +73,9 @@ public class NouveauRDV extends HttpServlet {
 	private void getAllPlanning(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PlannificationDAO plannificationDAO = new PlannificationDAOImpl();
-		List<Plannification> plannifications = plannificationDAO.getAll();
+		// Uniquement les créneaux d'aujourd'hui (non terminés) et à venir,
+		// triés du plus proche au plus lointain.
+		List<Plannification> plannifications = plannificationDAO.getAllUpcoming();
 		
 		HttpSession session = request.getSession();
 		Patient patient = (Patient) session.getAttribute("user");

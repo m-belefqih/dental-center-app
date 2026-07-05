@@ -92,6 +92,55 @@ public class PlannificationDAOImpl implements PlannificationDAO {
 	}
 
 	@Override
+	public List<Plannification> getAllUpcoming() {
+
+		try {
+			// jour (yyyy-MM-dd) et les heures (ex: 08h00, 14h00) sont stockés dans des
+			// formats où la comparaison lexicographique correspond à la comparaison
+			// chronologique : on garde les jours futurs et, pour aujourd'hui,
+			// uniquement les créneaux qui ne sont pas encore terminés.
+			String query = "SELECT * FROM plannification "
+					+ "WHERE jour > ? OR (jour = ? AND to_T > ?) "
+					+ "ORDER BY jour ASC, from_T ASC";
+			PreparedStatement preSt = connexion.prepareStatement(query);
+
+			String today = java.time.LocalDate.now().toString();
+			String now = java.time.LocalTime.now()
+					.format(java.time.format.DateTimeFormatter.ofPattern("HH'h'mm"));
+
+			preSt.setString(1, today);
+			preSt.setString(2, today);
+			preSt.setString(3, now);
+
+			ResultSet rs = preSt.executeQuery();
+
+			List<Plannification> plannifications = new ArrayList<Plannification>();
+
+			while (rs.next()) {
+
+				Plannification plannification = new Plannification();
+
+				plannification.setId(rs.getInt("id"));
+				plannification.setJour(rs.getString("jour"));
+				plannification.setFrom_T(rs.getString("from_T"));
+				plannification.setTo_T(rs.getString("to_T"));
+				plannification.setDentiste(dentisteDAO.getById(rs.getInt("id_dentiste")));
+				plannification.setAdmin(adminDAO.getById(rs.getInt("id_admin")));
+
+				plannifications.add(plannification);
+
+			}
+
+			return plannifications;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
+	@Override
 	public Plannification getById(int plannificationId) {
 		
 		try {

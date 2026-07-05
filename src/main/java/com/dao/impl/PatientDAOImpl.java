@@ -99,8 +99,8 @@ public class PatientDAOImpl implements PatientDAO {
 	// Method to send an email with a verification code
 	@Override
 	public boolean sendEmail(String EMAIL_TO, String CODE) {
-		String FROM_EMAIL = "mblq02@gmail.com";
-		String APP_PASSWORD = "atyu qytr mmjd vsid";
+		String FROM_EMAIL = "xxxxxxx@gmail.com";
+		String APP_PASSWORD = "xxxx xxxx xxxx xxxx";
 		
 		try {
 			

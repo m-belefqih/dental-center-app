@@ -81,8 +81,7 @@ public class DossierMedical extends HttpServlet {
 			request.setAttribute("patient", patient);
 			request.setAttribute("lesRendezVous", lesRendezVous);
 			dispatcher.forward(request, response);
-			doGet(request, response);
-			
+
 		}else {
 			System.out.println("Cannot parse null String !");
 		}

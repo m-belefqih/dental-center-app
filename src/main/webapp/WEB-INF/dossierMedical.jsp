@@ -59,9 +59,9 @@
         			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     			</div>
         	</c:if>
-			<div class="row">
+			<div class="row align-items-stretch mb-3">
 				<div class="col-lg-4">
-					<div class="card mb-4 border-custom">
+					<div class="card mb-4 border-custom h-100">
 						<div class="card-body text-center">
 							<c:choose>
 								<c:when test="${patient.sexe == 'Homme'}">
@@ -73,14 +73,13 @@
 							</c:choose>
 							<h5 class="my-3 fw">${patient.prenom} ${patient.nom}</h5>
 							<p class="text-muted mb-2">${patient.cin}</p>
-							<p class="text-muted mb-2">Enseignant</p>
 							<p class="text-muted mb-0">${patient.sexe}</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-8">
-					<div class="card mb-1 border-custom">
+					<div class="card mb-1 border-custom h-100">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-3">

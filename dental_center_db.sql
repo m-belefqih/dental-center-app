@@ -133,19 +133,6 @@ CREATE TABLE IF NOT EXISTS `plannification` (
     KEY `plannification_fk2` (`id_admin`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Déchargement des données de la table `plannification`
---
-
-INSERT INTO `plannification` (`id`, `jour`, `from_T`, `to_T`, `id_dentiste`, `id_admin`) VALUES
-(1, '2024-07-12', '08h00', '12h00', 2, 1),
-(2, '2024-07-12', '14h00', '18h00', 3, 1),
-(3, '2024-07-12', '08h00', '12h00', 1, 1),
-(4, '2024-07-25', '08h00', '12h00', 1, 1),
-(5, '2024-07-25', '08h00', '12h00', 2, 1),
-(6, '2024-07-25', '14h00', '18h00', 4, 1),
-(7, '2024-07-25', '14h00', '18h00', 5, 1);
-
 -- ---------------------------------------------------------------------------------
 
 --
@@ -166,20 +153,6 @@ CREATE TABLE IF NOT EXISTS `rendezvous` (
     KEY `rendezvous_fk1` (`id_patient`),
     KEY `rendezvous_fk2` (`id_plannification`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `rendezvous`
---
-
-INSERT INTO `rendezvous` (`id`, `dateRDV`, `motifRDV`, `actes`, `examensRadio`, `traitements`, `id_patient`, `id_plannification`) VALUES
-(1, '2024-07-12', 'Consultation', NULL, NULL, NULL, 5, 1),
-(2, '2024-07-12', 'Douleur dentaire', 'Carie profonde détectée', 'Présence de carie profonde sur la dent 18', 'Doliprane', 1, 2),
-(3, '2024-07-12', 'Douleur dentaire', 'Carie profonde détectée', 'Présence de carie profonde sur la dent 10', 'Doliprane', 3, 3),
-(4, '2024-07-25', 'Contrôle orthodontique', NULL, NULL, NULL, 4, 4),
-(5, '2024-07-25', 'Détartrage', NULL, NULL, NULL, 1, 5),
-(6, '2024-07-25', 'Saignement des gencives', NULL, NULL, NULL, 7, 6),
-(7, '2024-07-25', 'Blanchiment', NULL, NULL, NULL, 8, 7),
-(8, '2024-07-25', 'Contrôle annuel', NULL, NULL, NULL, 9, 4);
 
 -- ---------------------------------------------------------------------------------
 

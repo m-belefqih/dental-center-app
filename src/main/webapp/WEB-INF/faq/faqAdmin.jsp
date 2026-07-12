@@ -100,15 +100,6 @@
                         <p class="faq-question"><strong>Que montre le tableau de bord ?</strong></p>
                         <p class="faq-answer">Le tableau de bord affiche une vue d'ensemble de l'activité du cabinet : le nombre de patients, les rendez-vous du jour, le chiffre d'affaires, ainsi que des graphiques sur les statistiques de rendez-vous par mois et la répartition hommes/femmes des patients.</p>
                     </section>
-
-                    <hr>
-
-                    <h2 class="faq-title mb-2">Signaler une erreur</h2>
-
-                    <section class="faq-section">
-                        <p class="faq-question"><strong>Comment puis-je signaler une erreur sur le site ?</strong></p>
-                        <p class="faq-answer">Pour signaler une erreur sur le site, utilisez le formulaire de contact disponible dans le menu principal. Remplissez le formulaire avec les détails de l'erreur et cliquez sur "Envoyer". Nous ferons de notre mieux pour corriger l'erreur dès que possible.</p>
-                    </section>
                 </div>
             </div>
         </div>    

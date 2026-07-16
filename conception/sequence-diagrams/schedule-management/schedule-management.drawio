@@ -1,0 +1,144 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
+  <diagram name="Page-1" id="EcXLOpkquu0P8eMrGenQ">
+    <mxGraphModel dx="1501" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MobvbiLhYLG9iDOysARz-612" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=290;height=30;strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Définir le planning du dentiste&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="620" width="820" x="110" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-613" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Système&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="550" width="100" x="490" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-614" parent="MobvbiLhYLG9iDOysARz-613" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-615" parent="MobvbiLhYLG9iDOysARz-613" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-616" edge="1" parent="MobvbiLhYLG9iDOysARz-613" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" target="MobvbiLhYLG9iDOysARz-615" value="&lt;b style=&quot;&quot;&gt;3: Sélectionne une date&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" x="0.0016" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-310" y="180" as="sourcePoint" />
+            <mxPoint x="40" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-617" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" target="MobvbiLhYLG9iDOysARz-614" value="&lt;b style=&quot;&quot;&gt;1: Clique sur le bouton de planification&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="700" as="sourcePoint" />
+            <mxPoint x="410" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-618" edge="1" parent="1" source="MobvbiLhYLG9iDOysARz-614" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b style=&quot;&quot;&gt;2: Affiche la page de planification&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.0003" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="410" y="730" as="sourcePoint" />
+            <mxPoint x="180" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-619" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;SGBD&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="550" width="100" x="800" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-620" parent="MobvbiLhYLG9iDOysARz-619" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-621" parent="MobvbiLhYLG9iDOysARz-619" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="60" width="10" x="45" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-622" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Administrateur&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="170" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-623" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="180" y="670" as="sourcePoint" />
+            <mxPoint x="180" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-624" edge="1" parent="1" source="MobvbiLhYLG9iDOysARz-620" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b&gt;9: Enregistrée aves succès&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.0008" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="850" y="970" as="sourcePoint" />
+            <mxPoint x="540" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-625" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;p style=&quot;line-height: 60%;&quot;&gt;&lt;b style=&quot;&quot;&gt;10: Confirmation d&#39;enregistrement de planning&lt;/b&gt;&lt;/p&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="540" y="1000" as="sourcePoint" />
+            <mxPoint x="180" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-626" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b&gt;8: Enregistrer le planning de la date sélectionnée&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" x="-0.003" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="545" y="940" as="sourcePoint" />
+            <mxPoint x="840" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-627" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b&gt;5: Résultat(Planned, NotPlanned)&lt;/b&gt;">
+          <mxGeometry relative="1" x="0.0011" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="845" y="840" as="sourcePoint" />
+            <mxPoint x="540" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-628" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b&gt;4: Vérifier si cette date est déjà planifié&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" x="0.0011" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="545" y="800" as="sourcePoint" />
+            <mxPoint x="840" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-629" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=40;height=30;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;strokeWidth=2;" value="&lt;b&gt;alt&lt;/b&gt;" vertex="1">
+          <mxGeometry height="300" width="410" x="150" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-630" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#d31212;strokeWidth=2;" value="&lt;b&gt;[Planned]&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="190" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-631" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#d31212;strokeWidth=2;" value="&lt;b&gt;[NotPlanned]&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="210" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-632" edge="1" parent="1" source="MobvbiLhYLG9iDOysARz-634" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b&gt;6: Coche les cases des dentistes souhaités&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" y="165" as="geometry">
+            <mxPoint x="-165" as="offset" />
+            <mxPoint x="180" y="880" as="sourcePoint" />
+            <mxPoint x="535" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-633" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" target="MobvbiLhYLG9iDOysARz-634" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="880" as="sourcePoint" />
+            <mxPoint x="535" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-634" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="535" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-635" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="910" as="sourcePoint" />
+            <mxPoint x="535" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-636" connectable="0" parent="MobvbiLhYLG9iDOysARz-635" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;b&gt;7: clique sur le bouton d&#39;enregistrement&lt;/b&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.2282" y="1" as="geometry">
+            <mxPoint x="-40" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-637" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=-0.001;exitY=0.825;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="150" y="1030" as="sourcePoint" />
+            <mxPoint x="560" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-638" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;p style=&quot;line-height: 60%;&quot;&gt;&lt;b style=&quot;&quot;&gt;11: Affiche un message d&#39;avertissement&lt;/b&gt;&lt;/p&gt;">
+          <mxGeometry relative="1" x="0.0012" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="535" y="1090" as="sourcePoint" />
+            <mxPoint x="180" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

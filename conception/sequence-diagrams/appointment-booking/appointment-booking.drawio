@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
+  <diagram name="Page-1" id="EcXLOpkquu0P8eMrGenQ">
+    <mxGraphModel dx="2351" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MobvbiLhYLG9iDOysARz-553" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=200;height=30;strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Prise de rendez-vous&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="540" width="980" x="-120" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-554" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Système&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="470" width="100" x="340" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-555" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-556" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-557" edge="1" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" target="MobvbiLhYLG9iDOysARz-556" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;3: Sélectionne une date précise&amp;nbsp;&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="-410" y="180" as="sourcePoint" />
+            <mxPoint x="40" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-558" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-559" edge="1" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" target="MobvbiLhYLG9iDOysARz-558" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;5: Choix du RDV et Clique sur le bouton de prendre ce RDV&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="-410" y="250" as="sourcePoint" />
+            <mxPoint x="40" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-560" edge="1" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;6: Affiche le formulaire à remplir&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="280" as="sourcePoint" />
+            <mxPoint x="-410" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-561" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-562" edge="1" parent="MobvbiLhYLG9iDOysARz-554" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" target="MobvbiLhYLG9iDOysARz-561" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;7: Remplir le formulaire et soumettre&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="-410" y="320" as="sourcePoint" />
+            <mxPoint x="40" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-563" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" target="MobvbiLhYLG9iDOysARz-555" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;1: Clique sur le bouton de nouveau RDV&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="-70" y="230" as="sourcePoint" />
+            <mxPoint x="260" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-564" edge="1" parent="1" source="MobvbiLhYLG9iDOysARz-555" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;2: Affiche la lise de rendez-vous disponibles&amp;nbsp;&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="260" y="260" as="sourcePoint" />
+            <mxPoint x="-70" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-565" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;SGBD&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="470" width="100" x="730" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-566" parent="MobvbiLhYLG9iDOysARz-565" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-567" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#0000d1;strokeWidth=2;fillColor=#cfe7ff;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Patient&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="-80" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-568" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#0000d1;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-70" y="200" as="sourcePoint" />
+            <mxPoint x="-70" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-569" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;4: Affiche les rendez-vous disponibles pour la date sélectionnée&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="330" as="sourcePoint" />
+            <mxPoint x="-70" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-570" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;9: Enregistrée aves succès&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" x="-0.0008" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="770" y="500" as="sourcePoint" />
+            <mxPoint x="390" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-571" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;" value="&lt;p style=&quot;line-height: 60%;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;10: Confirmation d&#39;enregistrement du RDV&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;">
+          <mxGeometry relative="1" x="-0.001" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="390" y="530" as="sourcePoint" />
+            <mxPoint x="-70" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MobvbiLhYLG9iDOysARz-572" edge="1" parent="1" source="MobvbiLhYLG9iDOysARz-561" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#0000d1;strokeWidth=2;exitX=1.5;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;" target="MobvbiLhYLG9iDOysARz-566" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;8: Enregistrer le RDV&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="400" y="470" as="sourcePoint" />
+            <mxPoint x="769" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

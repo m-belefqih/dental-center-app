@@ -27,3 +27,4 @@ build/
 
 # === Secrets / Configuration locale ===
 src/main/resources/application.properties
+.env

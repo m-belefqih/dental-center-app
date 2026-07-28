@@ -1,0 +1,15 @@
+target/
+.git/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.build.xml
+.env
+*.md
+docs/

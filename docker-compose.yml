@@ -1,0 +1,45 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: dental_center_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3307:3306"
+    volumes:
+      # Importe automatiquement le schéma + les tables au premier démarrage
+      - ./dental_center_db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      # Persiste les donnees entre les redémarrages du conteneur
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  webapp:
+    build: .
+    container_name: dental_center_app
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      # AppConfig.java lit ces variables d'environnement en priorite sur
+      # application.properties (cle.avec.points -> CLE_AVEC_UNDERSCORES).
+      # allowPublicKeyRetrieval=true evite l'erreur "Public Key Retrieval
+      # is not allowed" du driver mysql-connector-java 8 avec l'auth
+      # par defaut de MySQL 8 (caching_sha2_password).
+      DB_URL: "jdbc:mysql://mysql:3306/${MYSQL_DATABASE}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+      DB_LOGIN: root
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MAIL_FROM: ${MAIL_FROM}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:

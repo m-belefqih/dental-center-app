@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>dental-center-app</name>
-  <description>This is my full project</description>
+  <description>JEE Application for managing a dental center</description>
   <dependencies>
 	  
 	  	<!--  https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api  -->

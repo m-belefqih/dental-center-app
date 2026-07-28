@@ -4,20 +4,6 @@ Application web full-stack pour la gestion d'un centre de chirurgie dentaire (pa
 
 ---
 
-### 🎓 Projet de fin d'études
-
-Réalisé par **Mohammed Belefqih**
-
-**Supervisé par :** Pr. Zyad Elkhadir
-
----
-
-## 🎯 Objectif du projet
-
-Concevoir et développer une application permettant la gestion complète d'un centre dentaire : prise de rendez-vous en ligne, gestion des patients et des dentistes, suivi des dossiers médicaux, et authentification sécurisée — le tout avec la plateforme Java EE.
-
----
-
 ## 🛠️ Outils utilisés
 
 **Backend**<br>
@@ -32,9 +18,21 @@ Concevoir et développer une application permettant la gestion complète d'un ce
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![AngularJS 1.6](https://img.shields.io/badge/AngularJS%201.6-E23237?style=for-the-badge&logo=angularjs&logoColor=white)
+![Google Charts](https://img.shields.io/badge/Google%20Charts-4285F4?style=for-the-badge)
 
 **Base de données**<br>
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+
+**Conception & maquettage**<br>
+![StarUML](https://img.shields.io/badge/StarUML-4B0082?style=for-the-badge)
+![draw.io](https://img.shields.io/badge/draw.io-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white)
+![Balsamiq Wireframes](https://img.shields.io/badge/Balsamiq%20Wireframes-CE472A?style=for-the-badge)
+
+**Environnement de développement**<br>
+![Eclipse IDE for Java EE Developers](https://img.shields.io/badge/Eclipse%20IDE-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 **Autres**<br>
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -44,23 +42,26 @@ Concevoir et développer une application permettant la gestion complète d'un ce
 
 ## 🔧 Fonctionnalités principales
 
-- 🔐 Authentification sécurisée avec vérification par code OTP envoyé par email
+- 🔐 Authentification et inscription sécurisée avec vérification par code OTP envoyé par email
 - 👥 Trois espaces dédiés : Administrateur, Dentiste et Patient
 - 🧑‍⚕️ Gestion des patients et des dentistes (ajout, modification, suppression)
 - 📅 Planification et prise de rendez-vous en ligne
-- 🩺 Dossier médical par patient, avec calcul automatique de l'âge à partir de la date de naissance
+- 🩺 Dossier médical par patient, avec ses rendez-vous
+- 👤 Consultation du profil utilisateur
 - 📊 Tableaux de bord avec statistiques
 - ❓ FAQ dédiée à chaque type d'utilisateur
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture MVC
 
-Le projet suit une architecture **MVC** avec une couche **DAO** pour l'accès aux données :
+![Architecture du projet](images/architecture.png)
 
-- **Couche Web** : interface utilisateur avec JSP, complétée par des Servlets pour gérer les requêtes.
-- **Couche Métier** : logique applicative (gestion des rendez-vous, des patients, des dentistes...).
-- **Couche DAO** : accès aux données via JDBC, pour des échanges fiables avec la base MySQL.
+L'application est structurée en trois couches, avec séparation stricte des responsabilités :
+
+- **Couche Présentation** : Servlets (contrôleurs) et JSP (vues), point d'entrée des requêtes utilisateur.
+- **Couche Métier** : logique applicative de l'application, appelée par les Servlets.
+- **Couche DAO** : accès aux données via JDBC, exécution des opérations CRUD sur la base MySQL.
 
 ---
 
@@ -138,3 +139,14 @@ Deux façons de lancer le projet, au choix.
    ```bash
    docker compose down
    ```
+
+---
+
+## 🎓 Contexte académique
+
+Ce projet a été réalisé dans le cadre du Projet de Fin d'Études (PFE), en vue de l'obtention du Diplôme de Licence Fondamentale en Sciences Mathématiques et Informatiques (LF-SMI).
+
+**Réalisé par :** Mohammed Belefqih
+**Supervisé par :** Pr. Zyad Elkhadir
+
+Le travail a couvert la **conception**, le **maquettage** et le **développement** de l'application.

@@ -53,6 +53,33 @@ Application web full-stack pour la gestion d'un centre de chirurgie dentaire (pa
 
 ---
 
+## 🖼️ Interfaces de l'application
+
+<table>
+  <tr>
+    <td align="center"><img src="images/Home.png" width="420"/><br/><b>Accueil</b></td>
+    <td align="center"><img src="images/Login.png" width="420"/><br/><b>Connexion</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/Dashboard.png" width="420"/><br/><b>Tableau de bord (Admin)</b></td>
+    <td align="center"><img src="images/Patients.png" width="420"/><br/><b>Liste des patients</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/Appointments.png" width="420"/><br/><b>Prise de rendez-vous</b></td>
+    <td align="center"><img src="images/Medical Record.png" width="420"/><br/><b>Dossier médical du patient</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/Profil.png" width="420"/><br/><b>Profil utilisateur</b></td>
+    <td align="center"><img src="images/History.png" width="420"/><br/><b>Historique de rendez-vous</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/My-RDV.png" width="420"/><br/><b>Rendez-vous de dentiste</b></td>
+    <td align="center"><img src="images/FAQ.png" width="420"/><br/><b>FAQ</b></td>
+</table>
+
+
+---
+
 ## 🏗️ Architecture MVC
 
 ![Architecture du projet](images/architecture.png)
@@ -146,7 +173,7 @@ Deux façons de lancer le projet, au choix.
 
 Ce projet a été réalisé dans le cadre du Projet de Fin d'Études (PFE), en vue de l'obtention du Diplôme de Licence Fondamentale en Sciences Mathématiques et Informatiques (LF-SMI).
 
-**Réalisé par :** Mohammed Belefqih
+**Réalisé par :** Mohammed Belefqih 
 **Supervisé par :** Pr. Zyad Elkhadir
 
 Le travail a couvert la **conception**, le **maquettage** et le **développement** de l'application.

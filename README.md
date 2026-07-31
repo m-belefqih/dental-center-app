@@ -61,6 +61,10 @@ Application web full-stack pour la gestion d'un centre de chirurgie dentaire (pa
     <td align="center"><img src="images/Login.png" width="420"/><br/><b>Connexion</b></td>
   </tr>
   <tr>
+    <td align="center"><img src="images/Registration.png" width="420"/><br/><b>Inscription</b></td>
+    <td align="center"><img src="images/OTP.png" width="420"/><br/><b>Vérification par code OTP</b></td>
+  </tr>
+  <tr>
     <td align="center"><img src="images/Dashboard.png" width="420"/><br/><b>Tableau de bord (Admin)</b></td>
     <td align="center"><img src="images/Patients.png" width="420"/><br/><b>Liste des patients</b></td>
   </tr>
@@ -75,6 +79,7 @@ Application web full-stack pour la gestion d'un centre de chirurgie dentaire (pa
   <tr>
     <td align="center"><img src="images/My-RDV.png" width="420"/><br/><b>Rendez-vous de dentiste</b></td>
     <td align="center"><img src="images/FAQ.png" width="420"/><br/><b>FAQ</b></td>
+  </tr>
 </table>
 
 

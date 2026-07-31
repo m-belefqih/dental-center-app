@@ -96,12 +96,12 @@ L'application est structurée en trois couches, avec séparation stricte des res
 
 Deux façons de lancer le projet, au choix.
 
-### Option 1 — Installation manuelle (Java, Tomcat, MySQL déjà installés)
+### Option 1 — ☕ Manuellement
 
 **Prérequis :**
 
 - [Java JDK 17](https://adoptium.net/)
-- [Apache Maven](https://maven.apache.org/download.cgi)
+- [Eclipse IDE for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-java-ee-developers)
 - [Apache Tomcat 9](https://tomcat.apache.org/download-90.cgi)
 - [MySQL 8](https://dev.mysql.com/downloads/mysql/)
 - [Git](https://git-scm.com/)
@@ -114,26 +114,13 @@ Deux façons de lancer le projet, au choix.
    cd dental-center-app
    ```
 
-2. Créer la base de données et importer le schéma :
-   ```bash
-   mysql -u root -p -e "CREATE DATABASE dental_center_db;"
-   mysql -u root -p dental_center_db < dental_center_db.sql
-   ```
+2. Créer une base de données MySQL nommée `dental_center_db`, puis importer son schéma à partir du fichier [dental_center_db.sql](dental_center_db.sql) situé à la racine du projet.
 
-3. Configurer l'accès à la base et à l'envoi d'emails :
-   ```bash
-   cp src/main/resources/application.properties.example src/main/resources/application.properties
-   ```
-   Puis éditez `application.properties` avec vos identifiants MySQL et un [mot de passe d'application Gmail](https://support.google.com/accounts/answer/185833) pour l'envoi des codes OTP.
+3. Créer le fichier de configuration : dans `src/main/resources`, copier le fichier `application.properties.example` vers un nouveau fichier `application.properties`, puis y renseigner vos identifiants MySQL et un [mot de passe d'application Gmail](https://support.google.com/accounts/answer/185833) pour l'envoi des codes OTP.
 
-4. Compiler le projet :
-   ```bash
-   mvn clean package
-   ```
+4. Importer le projet dans Eclipse (`File > Import > Existing Maven Projects`), ajouter un serveur Tomcat 9 dans l'onglet **Servers** (clic droit > New > Server), puis démarrer le projet sur ce serveur (`Run As > Run on Server`).
 
-5. Déployer le fichier `.war` généré dans `target/` sur votre serveur Tomcat (dossier `webapps/`), puis démarrer Tomcat.
-
-6. Accéder à l'application via `http://localhost:8080/dental-center-app-0.0.1-SNAPSHOT/` (ou le contexte choisi lors du déploiement).
+5. Accéder à l'application via `http://localhost:8080/dental-center-app/`.
 
 ### Option 2 — 🐳 Avec Docker et Docker Compose
 

@@ -166,6 +166,7 @@ Deux façons de lancer le projet, au choix.
 Ce projet a été réalisé dans le cadre du Projet de Fin d'Études (PFE), en vue de l'obtention du Diplôme de Licence Fondamentale en Sciences Mathématiques et Informatiques (LF-SMI).
 
 **Réalisé par :** Mohammed Belefqih 
+
 **Supervisé par :** Pr. Zyad Elkhadir
 
 Le travail a couvert la **conception**, le **maquettage** et le **développement** de l'application.
